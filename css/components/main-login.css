@@ -1,0 +1,197 @@
+@import url('../global/boilerplate.css');
+@import url('../global/fonts.css');
+
+
+body {
+  background-color: var(--color-white);
+}
+
+header {
+  background-color: var(--color-background-white);
+  padding: var(--size-16) var(--size-24);
+  font-family: var(--fn-poppins);
+  font-size: var(--fn-poppins);
+  box-shadow: var(--shadow-2);
+}
+
+.logo-poltek {
+  display: flex;
+  align-items: center;
+}
+
+.logo-poltek h3 {
+  background-image: linear-gradient(
+    to right,
+    var(--screaming-green-400),
+    var(--blue-shark-400)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  padding-left: var(--size-16);
+  font-weight: var(--fw-bold);
+  font-family: var(--font-opensans);
+  font-size: var(--fn-h6);
+  display: block;
+}
+
+.logo-poltek img {
+  width: 50px;
+}
+
+/* Login Container */
+.login-container {
+  margin-inline: 1rem;
+  margin-top: var(--size-32);
+}
+
+/* Greeting Container */
+.greeting-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.greeting-container img {
+  width: 4rem;
+  margin: 0 auto;
+}
+.greeting-container h2 {
+  font-family: var(--font-opensans);
+  font-size: var(--fn-h3);
+  margin-top: var(--size-16);
+  font-weight: var(--fw-bold);
+  color: var(--screaming-green-800);
+}
+
+.greeting-container p {
+  font-size: 0.8rem;
+  color: var(--screaming-green-500);
+}
+
+
+/* Form Container */
+.form-container {
+  margin-top: var(--size-32);
+  padding:var(--size-32) var(--size-24);
+  border-radius: var(--size-12);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-3);
+}
+
+.form-container h4 {
+  font-family: var(--font-poppins);
+  font-size: var(--fn-h4);
+  color: var(--gray-7);
+  font-weight:var(--fw-bold);
+}
+
+.form-container p {
+  font-size: 0.74rem;
+  margin-bottom: var(--size-16);
+  color: var(--gray-9);
+}
+
+.form-container label {
+  font-family: var(--font-poppins);
+  margin-bottom: var(--size-12);
+  font-weight: var(--fw-regular);
+  color: var(--gray-7);
+}
+
+/* input box */
+.form-container input {
+  width: 100%;
+  padding: var(--size-16) var(--size-40);
+  border: transparent;
+  border-radius: var(--size-8);
+  font-size: 0.9rem;
+  margin-bottom: var(--size-16);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-2);
+}
+
+.form-container input:focus {
+  outline: 2px solid var(--screaming-green-300);
+  caret-color: var(--screaming-green-500);
+}
+
+/* Show/Hide Password eye icon */
+.show-hide-password {
+  position: absolute;
+  width: var(--size-24);
+  right: var(--size-24);
+  top: calc(var(--size-8) - 2px );
+  cursor: pointer;
+}
+
+#open-password, #close-password {
+  width: 100%;
+}
+
+#close-password{
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.nim, .password {
+  position: relative;
+}
+
+.nim img, .password img{
+  width: var(--size-24);
+  position: absolute;
+  /* right: var(--size-16); */
+  left: var(--size-8);
+  top: calc(var(--size-48) + 8px);
+  transform: translateY(-50%);
+}
+
+.form-container button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-poppins);
+  padding: var(--size-16);
+  margin-top: var(--size-40);
+  background-color: var(--screaming-green-300);
+  color: white;
+  border: transparent;
+  border-radius: var(--size-8);
+  font-weight: var(--fw-bold);
+  box-shadow: 2px 2px 6px 2px var(--screaming-green-300);
+  transition: all 0.3s ease;
+}
+
+.form-container button img {
+  margin-left: var(--size-8);
+}
+
+.form-container button:hover {
+  background-color: var(--screaming-green-500);
+  box-shadow: 2px 2px 6px 2px var(--screaming-green-500);
+}
+
+
+.copyright {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--screaming-green-800);
+  margin-top: var(--size-16);
+}
+
+
+
+
+
+/* desktop */
+@media (min-width: 768px) {
+  .login-container {
+    max-width: calc(var(--size-100) * 5 );
+    margin: var(--size-40) auto;
+  }
+}

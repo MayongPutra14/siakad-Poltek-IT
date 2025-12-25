@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login SIAKAD</title>
+
+    <link rel="stylesheet" href="./css/components/main-login.css">
+</head>
+<body>
+    <header>
+        <div class="logo-poltek">
+            <img src="./assets/images/Poltek-logo.svg" alt="University Logo">
+            <h3>SIAKAD POLTEK-IT</h3>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <div class="greeting-container">
+                <img src="./assets/icons/Icon-Education.svg" alt="Icon Education">
+                <h2>Selamat Datang Kembali!</h2>
+                <p>Sistem Informasi Akademik Politeknik Insan Tazakka</p>
+            </div>
+
+        <div class="form-container">
+            <h4>Masuk Ke Akun</h4>
+            <p>Silahkan Masukan NIM/NIDN dan Password Anda.</p>
+            <form action="#" method="POST">
+                <div class="nim">
+                    <label for="nim">NIM / NIDN</label>
+                    <input type="text" id="nim" name="nim" placeholder="Nomor Induk" required>
+                    <img src="./assets/icons/person-icn.svg">
+                </div>
+                
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <img src="./assets/icons/lock-icn.svg">
+                    <div class="show-hide-password">
+                        <img id = "open-password" src="./assets/icons/eye-opn-icn.svg">
+                        <img id = "close-password"  src="./assets/icons/eye-cls-icn.svg">
+                    </div>
+                </div>
+                <button type="submit">Login Masuk <img src="./assets/icons/right-arrow-icn.svg"></button>
+            </form>
+        </div>
+        <p class="copyright">&copy; 2025 Politeknik Insan Tazakka. All Rights reserved. </p>
+        </div>
+    </main>
+    <script src="./javascript/main.js" type="module"></script>
+</body>
+</html>
