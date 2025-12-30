@@ -4,16 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Poltek IT</title>
-    <style>
+
+    <!-- MY CSS -->
+     <link rel="stylesheet" href="./css/style.css">
+    <!-- <style>
       td, th {
         padding: 8px 12px;
         border: 1px solid #ddd;
         text-align: center;
       }
-    </style>
+    </style> -->
   </head>
   <body>
+    <!-- NAME, ROLE, AND PICTURE, POSISITION TOP RIGHT -->
+      <header class="header">
+        <div class="menu-toggle">
+          <img src="./assets/icons/menubar.svg" alt="Menu Toggle" />
+        </div>
+          <div class="name">
+            <h3>Gilang Mayong</h3>
+            <span>Mahasiswa</span>
+          </div>
+          <img src="./assets/images/github Profile.jpg" alt="Profile Picture" />
+      </header>
+
     <div class="dashboard-container">
+      <!-- SIDEBAR -->
       <aside class="sidebar">
         <div class="sidebar-header">
           <h2>Dashboard Poltek IT</h2>
@@ -134,15 +150,11 @@
         </nav>
       </aside>
 
+      
+
+
       <!-- MAIN CONTENT -->
       <main class="main-content">
-        <div class="header">
-          <div class="name">
-            <h3>Gilang Mayong</h3>
-            <span>Mahasiswa</span>
-          </div>
-          <img src="./assets/images/github Profile.jpg" alt="Profile Picture" />
-        </div>
         <!-- MENU DASHBOARD -->
         <section class="dashboard-content">
           <!-- CARD PROFILE & ANNOUNCEMENT -->
@@ -713,5 +725,6 @@
 
       </main>
     </div>
+    <script src="./javascript/dashboard.js" type="module"></script>
   </body>
 </html>

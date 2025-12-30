@@ -1,6 +1,12 @@
 /* Global Styles */
 @import url('./global/boilerplate.css');
 @import url('./global/fonts.css');
+@import url('./global/main-layout.css');
 
+/* Pages */
+/* @import url('./pages/dashboard.css'); */
+@import url('./pages/login.css');
 
-/* components */
+/* Components */
+@import url('./components/header.css');
+@import url('./components/sidebar.css');
