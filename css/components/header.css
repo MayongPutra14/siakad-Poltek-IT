@@ -1,56 +1,67 @@
-header {
+/* header container */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* display: none; */
+  background-color: var(--light-bg-secondary);
+  border-bottom: 1px solid var(--gray-12);
+  box-shadow: var(--shadow-xs);
 }
 
-header img {
-  width: clamp(var(--size-40), 5vw, var(--size-100));
-  border-radius: 50%;
-}
-
-header .menu-toggle {
-  border: 2px solid transparent;
-  border-radius: var(--size-4);
-  padding: var(--size-4);
-}
-
-.menu-toggle.active {
-  border: 2px solid var(--gray-3);
-}
-
-header .name {
+/* header content mobile version */
+.header .name {
   display: none;
-  margin-right: var(--size-16);
-  text-align: right;
 }
 
-header .name h3 {
-  font-family: var(--font-opensans);
-  font-weight: var(--fw-semibold);
-  color: var(--gray-5);
-  font-size: var(--fn-h3);
-  margin-bottom: var(--size-8);
+/* Student Name */
+.name h3 {
+  font-family: var(--font-poppins);
+  font-size: var(--fz-h5);
+  font-weight: var(--fw-medium);
+  color: var(--light-text-primary);
 }
 
-header .name span {
+/* Role */
+.name span {
   font-family: var(--font-poppins);
   font-weight: var(--fw-regular);
-  color: var(--blue-9);
-  font-size: var(--fn-p);
+  color: var(--light-text-secondary);
 }
 
+/* photo Profile */
+.header img {
+  width: clamp(var(--size-40), 8vw, var(--size-56));
+  height: clamp(var(--size-40), 8vw, var(--size-56));
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+.header .menu-toggle {
+  cursor: pointer;
+  font-size: var(--size-40);
+  box-shadow: var(--shadow-xs);
+  padding: var(--size-4);
+  border-radius: var(--size-8);
+  transition: background-color 0.3s ease;
+}
+
+.header .menu-toggle:hover {
+  background-color: var(--gray-11);
+}
+
+
+/* header content desktop version */
 @media (min-width: 48rem) {
-  header {
+  .header {
     justify-content: flex-end;
   }
-
-  header .name {
-    display: block;
+  .header .menu-toggle {
+    display: none;
   }
 
-  header .menu-toggle {
-    display: none;
+  .header .name {
+    display: block;
+    margin-right: var(--size-16);
+    text-align: right;
   }
 }

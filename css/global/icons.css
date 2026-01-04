@@ -1,0 +1,26 @@
+.material-symbols-rounded {
+  font-size: 24px; /* Standar ukuran ikon */
+  vertical-align: middle; /* Supaya sejajar dengan teks di sampingnya */
+  line-height: 1px;
+}
+
+.material-symbols-rounded.sidebar-icn {
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
+  color: var(--light-text-tertiary);
+  margin-right: var(--size-16) ;
+  font-size: calc(var(--size-32) - 6px);
+}
+
+.sidebar-menu ul li a.selected .material-symbols-rounded.sidebar-icn {
+  color: #fff;
+}
+
+/* logout icn */
+.material-symbols-rounded.logout {
+  color: red;
+}
+
+.material-symbols-rounded.login-icn {
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
+  color: var(--gray-11);
+}

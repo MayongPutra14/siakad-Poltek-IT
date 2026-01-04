@@ -1,59 +1,155 @@
-/* open-sans-regular - latin */
+/* poppins-300 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Open Sans";
+  font-family: 'Poppins';
   font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/open-sans-v44-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-weight: 300;
+  src: url('/fonts/poppins-v24-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* open-sans-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/open-sans-v44-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
 /* poppins-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/poppins-v24-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/poppins-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/poppins-v24-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/poppins-v24-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/poppins-v24-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('/fonts/poppins-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/poppins-v24-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 :root {
-  --font-opensans: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --font-poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-  /* Font size */
-  /* --fn-inter-h1: clamp(2.805rem, 1.785rem + 5.1vw, 5.61rem); */
-  --fn-h1: clamp(2.5rem, 1.585rem + 3.5vw, 5.61rem);
-  --fn-h2: clamp(2.104rem, 1.339rem + 2.83vw, 4.209rem);
-  --fn-h3: clamp(1.5rem, 3vw, 2.25rem);
-  --fn-h4: clamp(1.185rem, 0.754rem + 2.15vw, 2.369rem);
-  --fn-h5: clamp(0.888rem, 0.565rem + 1.62vw, 1.777rem);
-  --fn-h6: clamp(0.999rem, 0.424rem + 1.31vw, 3.333rem);
-  --fn-p: clamp(0.8rem, 0.76rem + 1.1vw, 1.25rem);
-  --fn-sml: clamp(0.7rem, 0.5rem + 1vw, 1.15rem);
-
-  /* Line Height */
-  --lh-p: 2;
-
-  /* Thickness */
+  /* Type Scale - Perfect Fourth (1.333) with clamp() for responsive scaling */
+  /* H1 - 5.61rem (89.76px) */
+  --fz-h1: clamp(3.815rem, 3.4rem + 2.075vw, 5.61rem);
+  /* H2 - 4.209rem (67.34px) */
+  --fz-h2: clamp(3.157rem, 2.85rem + 1.535vw, 4.209rem);
+  /* H3 - 3.157rem (50.51px) */
+  --fz-h3: clamp(2.369rem, 2.15rem + 1.095vw, 3.157rem);
+  /* H4 - 2.369rem (37.90px) */
+  --fz-h4: clamp(1.777rem, 1.6rem + 0.885vw, 2.369rem);
+  /* H5 - 1.777rem (28.43px) */
+  --fz-h5: clamp(1.333rem, 1.2rem + 0.665vw, 1.777rem);
+  /* H6 - 1.333rem (21.33px) */
+  --fz-h6: clamp(1.125rem, 1rem + 0.625vw, 1.333rem);
+  
+  /* Small text */
+  --fz-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.85rem);
+  /* Body text / Paragraph */
+  --fz-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);
+  --fz-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  /* Base Font Size */
+  --font-base: 1rem; /* 16px */
+  
+  /* Font Weights */
+  --fw-light: 300;
   --fw-regular: 400;
+  --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Line Heights */
+  --lh-tight: 1.2;
+  --lh-snug: 1.375;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.625;
+  --lh-loose: 2;
+
+  /* Letter Spacing */
+  --ls-tight: -0.025em;
+  --ls-normal: 0;
+  --ls-wide: 0.025em;
 }
+
+/* Usage Example - Apply to elements */
+/* body {
+  font-family: var(--font-family-primary);
+  font-size: var(--fz-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+} */
+
+h1 {
+  font-size: var(--fz-h1);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+
+h2 {
+  font-size: var(--fz-h2);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+
+h3 {
+  font-size: var(--fz-h3);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+}
+
+h4 {
+  font-size: var(--fz-h4);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+}
+
+h5 {
+  font-size: var(--fz-h5);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-normal);
+}
+
+h6 {
+  font-size: var(--fz-h6);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-normal);
+}
+
+/* p,
+li {
+  font-size: var(--fz-base);
+  line-height: var(--lh-relaxed);
+}
+
+small {
+  font-size: var(--fz-sm);
+}
+
+.text-xs {
+  font-size: var(--fz-xs);
+} */

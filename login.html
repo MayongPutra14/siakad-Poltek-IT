@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login SIAKAD</title>
 
+    <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- GOOGLE ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 <body>
     <header>
         <div class="logo-poltek">
             <img src="./assets/images/Poltek-logo.svg" alt="University Logo">
-            <h3>SIAKAD POLTEK-IT</h3>
+            <h5>SIAKAD POLTEK-IT</h5>
         </div>
     </header>
 
@@ -19,8 +24,8 @@
         <div class="login-container">
             <div class="greeting-container">
                 <img src="./assets/icons/Icon-Education.svg" alt="Icon Education">
-                <h2>Selamat Datang Kembali!</h2>
-                <p>Sistem Informasi Akademik Politeknik Insan Tazakka</p>
+                <h3>Selamat Datang</h3>
+                <p>SIAKAD Politeknik Insan Tazakka</p>
             </div>
 
         <div class="form-container">
@@ -30,19 +35,19 @@
                 <div class="nim">
                     <label for="nim">NIM / NIDN</label>
                     <input type="text" id="nim" name="nim" placeholder="Nomor Induk" required>
-                    <img src="./assets/icons/person-icn.svg">
+                    <span class="material-symbols-rounded login-icn">person</span>
                 </div>
                 
                 <div class="password">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Password" required>
-                    <img src="./assets/icons/lock-icn.svg">
-                    <div class="show-hide-password">
-                        <img id = "open-password" src="./assets/icons/eye-opn-icn.svg">
-                        <img id = "close-password"  src="./assets/icons/eye-cls-icn.svg">
+                    <span class="material-symbols-rounded login-icn">lock</span>
+                    <div class="show-hide-password" aria-label="Button Show Password">
+                        <span class="material-symbols-rounded login-icn visible active">visibility</span>
+                        <span class="material-symbols-rounded login-icn unvisible">visibility_off</span>
                     </div>
                 </div>
-                <button type="submit">Login Masuk <img src="./assets/icons/right-arrow-icn.svg"></button>
+                <button type="submit">Login Masuk <img src="./assets/icons/right-arrow-icn.svg" alt="Right Arrow"></button>
             </form>
         </div>
         <p class="copyright">&copy; 2025 Politeknik Insan Tazakka. All Rights reserved. </p>

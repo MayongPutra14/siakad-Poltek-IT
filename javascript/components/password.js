@@ -1,6 +1,6 @@
 const passwordInput = document.getElementById("password");
-const openIcon = document.getElementById("open-password");
-const closeIcon = document.getElementById("close-password");
+const openIcon = document.querySelector(".visible");
+const closeIcon = document.querySelector(".unvisible");
 
 function openPassword() {
   passwordInput.type = "text";
@@ -9,10 +9,9 @@ function openPassword() {
 }
 
 function closePassword() {
-   passwordInput.type = "password";
+  passwordInput.type = "password";
   closeIcon.style.display = "none";
   openIcon.style.display = "block";
-
 }
 
 openIcon.addEventListener("click", openPassword);

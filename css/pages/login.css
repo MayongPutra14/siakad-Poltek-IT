@@ -1,5 +1,6 @@
 @import url('../global/boilerplate.css');
 @import url('../global/fonts.css');
+@import url('../global/icons.css');
 
 
 body {
@@ -9,9 +10,9 @@ body {
 header {
   background-color: var(--color-background-white);
   padding: var(--size-16) var(--size-24);
-  font-family: var(--fn-poppins);
-  font-size: var(--fn-poppins);
-  box-shadow: var(--shadow-2);
+  font-family: var(--font-poppins);
+  font-size: var(--font-poppins);
+  box-shadow: var(--shadow-md);
 }
 
 .logo-poltek {
@@ -19,25 +20,25 @@ header {
   align-items: center;
 }
 
-.logo-poltek h3 {
+.logo-poltek h5 {
+  display: block;
+  margin-left: var(--size-16);
+  font-weight: var(--fw-bold);
+  font-family: var(--font-poppins);
+  font-size: var(--fz-h5);
+  color: transparent;
+  background-clip: text;
   background-image: linear-gradient(
     to right,
-    var(--screaming-green-400),
-    var(--blue-shark-400)
+    var(--green-400),
+    var(--teal-500)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  padding-left: var(--size-16);
-  font-weight: var(--fw-bold);
-  font-family: var(--font-opensans);
-  font-size: var(--fn-h6);
-  display: block;
 }
 
 .logo-poltek img {
-  width: 50px;
+  width: var(--size-56);
 }
 
 /* Login Container */
@@ -56,64 +57,71 @@ header {
   width: 4rem;
   margin: 0 auto;
 }
-.greeting-container h2 {
-  font-family: var(--font-opensans);
-  font-size: var(--fn-h3);
+
+.greeting-container h3 {
+  font-family: var(--font-poppins);
+  font-size: var(--fz-h3);
   margin-top: var(--size-16);
   font-weight: var(--fw-bold);
-  color: var(--screaming-green-800);
+  color: var(--emerald-900);
 }
 
 .greeting-container p {
   font-size: 0.8rem;
-  color: var(--screaming-green-500);
+  color: var(--green-400);
 }
 
 
 /* Form Container */
 .form-container {
-  margin-top: var(--size-32);
+  margin-top: var(--size-56);
   padding:var(--size-32) var(--size-24);
   border-radius: var(--size-12);
   background-color: var(--color-white);
-  box-shadow: var(--shadow-3);
+  box-shadow: var(--shadow-lg);
 }
 
 .form-container h4 {
   font-family: var(--font-poppins);
-  font-size: var(--fn-h4);
-  color: var(--gray-7);
+  font-size: var(--fz-h4);
+  color: var(--emerald-900);
   font-weight:var(--fw-bold);
 }
 
 .form-container p {
   font-size: 0.74rem;
   margin-bottom: var(--size-16);
-  color: var(--gray-9);
+  color: var(--green-400);
 }
 
 .form-container label {
   font-family: var(--font-poppins);
   margin-bottom: var(--size-12);
-  font-weight: var(--fw-regular);
-  color: var(--gray-7);
+  font-weight: var(--fw-medium);
+  color: var(--gray-1);
 }
 
 /* input box */
 .form-container input {
   width: 100%;
-  padding: var(--size-16) var(--size-40);
-  border: transparent;
-  border-radius: var(--size-8);
+  font-family: var(--font-poppins);
   font-size: 0.9rem;
-  margin-bottom: var(--size-16);
   background-color: var(--color-white);
-  box-shadow: var(--shadow-2);
+  padding: var(--size-16) var(--size-40);
+  margin-bottom: var(--size-16);
+  border-radius: var(--size-8);
+  border: transparent;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-container input::placeholder {
+  color: var(--gray-11);
+  opacity: 1;
 }
 
 .form-container input:focus {
-  outline: 2px solid var(--screaming-green-300);
-  caret-color: var(--screaming-green-500);
+  outline: 2px solid var(--green-400);
+  caret-color: var(--green-500);
 }
 
 /* Show/Hide Password eye icon */
@@ -124,12 +132,12 @@ header {
   top: calc(var(--size-8) - 2px );
   cursor: pointer;
 }
-
-#open-password, #close-password {
+/* visible and unvisible eyes */
+.visible, .unvisible {
   width: 100%;
 }
 
-#close-password{
+.show-hide-password .unvisible{
   display: none;
 }
 
@@ -140,16 +148,16 @@ header {
 .nim, .password {
   position: relative;
 }
-
-.nim img, .password img{
+/* Icon person, lock, and eyes */
+.nim span, .password span{
   width: var(--size-24);
   position: absolute;
-  /* right: var(--size-16); */
   left: var(--size-8);
-  top: calc(var(--size-48) + 8px);
+  top: calc(var(--size-48) + 12px);
   transform: translateY(-50%);
 }
 
+/* button login */
 .form-container button {
   width: 100%;
   display: flex;
@@ -158,35 +166,31 @@ header {
   font-family: var(--font-poppins);
   padding: var(--size-16);
   margin-top: var(--size-40);
-  background-color: var(--screaming-green-300);
+  background-color: var(--green-300);
   color: white;
   border: transparent;
   border-radius: var(--size-8);
   font-weight: var(--fw-bold);
-  box-shadow: 2px 2px 6px 2px var(--screaming-green-300);
+  box-shadow: 2px 2px 6px 2px var(--green-300);
   transition: all 0.3s ease;
 }
 
+/* Right Arrow */
 .form-container button img {
   margin-left: var(--size-8);
 }
 
 .form-container button:hover {
-  background-color: var(--screaming-green-500);
-  box-shadow: 2px 2px 6px 2px var(--screaming-green-500);
+  background-color: var(--green-500);
+  box-shadow: 2px 2px 6px 2px var(--green-500);
 }
-
 
 .copyright {
   text-align: center;
   font-size: 0.7rem;
-  color: var(--screaming-green-800);
+  color: var(--emerald-900);
   margin-top: var(--size-16);
 }
-
-
-
-
 
 /* desktop */
 @media (min-width: 768px) {

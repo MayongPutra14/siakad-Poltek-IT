@@ -2,9 +2,9 @@
 @import url('./global/boilerplate.css');
 @import url('./global/fonts.css');
 @import url('./global/main-layout.css');
+@import url('./global/icons.css');
 
 /* Pages */
-/* @import url('./pages/dashboard.css'); */
 @import url('./pages/login.css');
 
 /* Components */

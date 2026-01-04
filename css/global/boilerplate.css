@@ -1,53 +1,47 @@
 :root {
-  --blue-1: #fdfdfe;
-  --blue-2: #f7f9ff;
-  --blue-3: #edf2fe;
-  --blue-4: #dfeaff;
-  --blue-5: #d0dfff;
-  --blue-6: #bdd1ff;
-  --blue-7: #a6bff9;
-  --blue-8: #87a5ef;
-  --blue-9: #3d63dd;
-  --blue-10: #3657c3;
-  --blue-11: #395bc7;
-  --blue-12: #1d2e5c;
 
-  --blue-a1: #00008002;
-  --blue-a2: #0040ff08;
-  --blue-a3: #0047f112;
-  --blue-a4: #0058ff20;
-  --blue-a5: #0052ff2f;
-  --blue-a6: #004eff42;
-  --blue-a7: #0048ee59;
-  --blue-a8: #0040dd78;
-  --blue-a9: #0032d2c2;
-  --blue-a10: #002ab3c9;
-  --blue-a11: #002cb7c6;
-  --blue-a12: #001347e2;
+/* Light Mode */
+--light-bg-primary: #F9FAFB;
+--light-bg-secondary: #FFFFFF;
+--light-bg-hover: #F3F4F6;
+--light-border: #E5E7EB;
+--light-text-primary: #1F2937;
+--light-text-secondary: #4B5563;
+--light-text-tertiary: #9CA3AF;
 
-  /* --blue-contrast: #fff;
-  --blue-surface: #f5f8ffcc;
-  --blue-indicator: #3d63dd;
-  --blue-track: #3d63dd; */
+/* Dark Mode */
+--dark-bg-primary: #111827;
+--dark-bg-secondary: #1F2937;
+--dark-bg-hover: #374151;
+--dark-border: #374151;
+--dark-text-primary: #FFFFFF;
+--dark-text-secondary: #D1D5DB;
+--dark-text-tertiary: #9CA3AF;
 
-  --color-bg-black: #111;
-  --color-bg-white: #fff;
-  --color-black: #111;
-  --color-white: #fff;
+/* Green Shades */
+--green-50: #F0FDF4;
+--green-100: #DCFCE7;
+--green-200: #BBF7D0;
+--green-300: #68f263;
+--green-400: #4ADE80;   /* Gradient start */
+--green-500: #22C55E;   /* Primary */
+--green-800: #166534;   /* Dark mode text */
+--green-900: #14532D;   /* Dark badges */
 
-  /* Screamin' Green */
-  --screaming-green-50: rgb(242, 254, 241);
-  --screaming-green-100: hsl(116, 94%, 93%);
-  --screaming-green-200: hsl(117, 87%, 85%);
-  --screaming-green-300: hsl(118, 85%, 67%);
-  --screaming-green-400: hsl(118, 77%, 58%);
-  --screaming-green-500: hsl(118, 77%, 45%);
-  --screaming-green-800: hsl(119, 71%, 24%);
-  --screaming-green-950: hsl(121, 88%, 10%);
+/* Emerald Shades */
+--emerald-100: #D1FAE5;
+--emerald-200: #A7F3D0;
+--emerald-500: #10B981; /* Secondary primary */
+--emerald-800: #065F46;
+--emerald-900: #064E3B;
 
-  /* Blue Shark */
-  --blue-shark-400: hsl(196, 37%, 53%);
+/* Teal */
+--teal-500: #14B8A6;
 
+/* Lime */
+--lime-500: #84CC16;
+
+/* gray */
   --gray-1: #111113;
   --gray-2: #19191b;
   --gray-3: #222325;
@@ -61,29 +55,24 @@
   --gray-11: #b2b3bd;
   --gray-12: #eeeef0;
 
-  /* Box Shadow */
-  --shadow-color-primary: rgba(0, 0, 0, 0.14);
-  --shadow-color-secondary: rgba(0, 0, 0, 0.12);
-  /* Z-Level 1 (1dp) */
-  --shadow-1: 0 1px 3px var(--shadow-color-primary),
-    0 1px 2px var(--shadow-color-secondary);
+/* Shadow System - Soft to Strong */
+/* XS - Extra Soft (barely visible, subtle depth) */
+--shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+/* SM - Soft (gentle elevation) */
+--shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+             0 1px 2px -1px rgba(0, 0, 0, 1);
+/* MD - Medium (clear elevation, good for cards) */
+--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+             0 2px 4px -2px rgba(0, 0, 0, 0.1);
+/* LG - Large (prominent elevation) */
+--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+             0 4px 6px -4px rgba(0, 0, 0, 0.1);
+/* XL - Extra Large (floating effect) */
+--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+             0 8px 10px -6px rgba(0, 0, 0, 0.1);
+/* 2XL - Double Extra Large (dramatic depth) */
+--shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
-  /* Z-Level 2 (2dp) */
-  --shadow-2: 0 2px 4px -1px var(--shadow-color-primary),
-    0 4px 5px 0 var(--shadow-color-secondary), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
-
-  /* Z-Level 3 (3dp) */
-  --shadow-3: 0 3px 5px -1px var(--shadow-color-primary),
-    0 6px 10px 0 var(--shadow-color-secondary), 0 1px 18px 0 rgba(0, 0, 0, 0.08);
-
-  /* Z-Level 6 (6dp) */
-  --shadow-6: 0 6px 10px 0 var(--shadow-color-primary),
-    0 1px 18px 0 var(--shadow-color-secondary);
-
-  /* Z-Level 12 (12dp) */
-  --shadow-12: 0 12px 17px 2px var(--shadow-color-primary),
-    0 5px 22px 4px var(--shadow-color-secondary),
-    0 7px 8px -4px rgba(0, 0, 0, 0.2);
 
   /* Spacing Scale (4px Multiplier) */
   --size-0: 0;
@@ -103,6 +92,9 @@
   --size-64: 4rem; /* 64px */
   --size-80: 5rem; /* 80px */
   --size-100: 6.25rem; /* 100px */
+
+
+
 }
 
 /* .dark,
@@ -139,7 +131,39 @@
   --gray-track: #6c6e79;
 } */
 
-*,
+
+/* blue from radix
+
+
+  --blue-1: #fdfdfe;
+  --blue-2: #f7f9ff;
+  --blue-3: #edf2fe;
+  --blue-4: #dfeaff;
+  --blue-5: #d0dfff;
+  --blue-6: #bdd1ff;
+  --blue-7: #a6bff9;
+  --blue-8: #87a5ef;
+  --blue-9: #3d63dd;
+  --blue-10: #3657c3;
+  --blue-11: #395bc7;
+  --blue-12: #1d2e5c;
+
+  --blue-a1: #00008002;
+  --blue-a2: #0040ff08;
+  --blue-a3: #0047f112;
+  --blue-a4: #0058ff20;
+  --blue-a5: #0052ff2f;
+  --blue-a6: #004eff42;
+  --blue-a7: #0048ee59;
+  --blue-a8: #0040dd78;
+  --blue-a9: #0032d2c2;
+  --blue-a10: #002ab3c9;
+  --blue-a11: #002cb7c6;
+  --blue-a12: #001347e2;
+
+ */
+
+ *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -151,6 +175,7 @@
   margin: 0;
   font: inherit;
 }
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -178,7 +203,7 @@ a {
 
 p {
   font-family: var(--font-poppins);
-  line-height: var(--lh-p);
+  line-height: var(--lh-normal);
   font-weight: var(--fw-regular);
   margin: 0;
 }

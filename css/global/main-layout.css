@@ -1,0 +1,37 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 0.8fr repeat(3, 1fr);
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    "sidebar header  header  header"
+    "sidebar content content content";
+  height: 100vh;
+}
+
+
+#header {
+  grid-area: header;
+}
+
+#sidebar {
+  grid-area: sidebar;
+}
+
+#main-content {
+  display: none;
+  grid-area: content;
+  overflow-y: auto;
+  background-color: var(--blue-9);
+}
+
+@media (max-width: 48rem) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "content";
+  }
+
+ 
+}
