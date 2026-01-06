@@ -3,7 +3,7 @@
 @import url("./global/fonts.css");
 @import url("./global/main-layout.css");
 @import url("./global/icons.css");
-@import url("./global/images-profile.css");
+@import url("./global/reuseable-components.css");
 
 /* Pages */
 @import url("./pages/login.css");
@@ -12,3 +12,4 @@
 @import url("./components/header.css");
 @import url("./components/sidebar.css");
 @import url("./components/dashboard-content.css");
+@import url("./components/biodata-content.css");

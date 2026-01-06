@@ -203,7 +203,7 @@ html {
 }
 
 section {
-  padding-inline: var(--size-16);
+  padding: var(--size-16) var(--size-12);
 }
 
 h1,

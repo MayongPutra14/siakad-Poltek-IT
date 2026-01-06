@@ -19,10 +19,7 @@
 #main-content {
   grid-area: content;
   overflow-y: auto;
-  background-color: var(--blue-9);
 }
-
-/* dashboard menu */
 
 /* SIAKAD Style in mobile */
 @media (max-width: 48rem) {
@@ -30,25 +27,31 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
     grid-template-areas:
-    "header"
-    "content";
+      "header"
+      "content";
   }
 }
 
+/* dashboard & biodata<space>: space between profile and content in right */
+.dashboard-content .student-profile,
+.biodata-mahasiswa {
+  display: grid;
+  gap: var(--size-12);
+}
+
 /* Menu dashboard in mobile */
-#dashboard {
+section.dashboard-content {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  gap: var(--size-16);
 }
-/* Menu dashboard in Desktop */
-@media(min-width: 48rem) {
-  #dashboard .student-profile {
+
+/* Menu dashboard in desktop */
+@media (min-width: 48rem) {
+  section .student-profile {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-    "card-indentity announcement-container announcement-container"; 
+    grid-template-areas: "card-indentity announcement-container announcement-container";
     gap: var(--size-12);
   }
 
@@ -56,9 +59,24 @@
     grid-area: announcement-container;
   }
 
-  #dashboard .statistic-container {
+  section .statistic-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--size-12)
+    gap: var(--size-12);
+  }
+}
+
+/* Menu biodata in mobile*/
+section.biodata-mahasiswa {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+/* Menu biodata in desktop */
+@media (min-width: 48rem) {
+  section.biodata-mahasiswa {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: var(--size-12);
   }
 }

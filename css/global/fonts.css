@@ -140,13 +140,12 @@ h6 {
   line-height: var(--lh-normal);
 }
 
-/* p,
-li {
+p {
   font-size: var(--fz-base);
   line-height: var(--lh-relaxed);
 }
 
-small {
+/* .small {
   font-size: var(--fz-sm);
 }
 

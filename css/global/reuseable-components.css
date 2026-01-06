@@ -1,0 +1,57 @@
+/* Image in menu dasboard and menu biodata  */
+#dashboard img,
+#biodata img {
+  width: calc(var(--size-100) * 2) ;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+/* =============================== */
+/* style card: for every contaier  */
+/* =============================== */
+/* profile-card container and announcement-container*/
+.card-indentity,
+.announcement-container, .detail-biodata {
+  background-color: var(--light-bg-secondary);
+  /* margin-top: var(--size-16);  */
+  border: 1px solid var(--light-border);
+  border-radius: var(--size-8);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* card indentity */
+.card-indentity {
+  text-align: center;
+  width: 100%;
+  padding: var(--size-40) var(--size-16);
+}
+
+.identity-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-16);
+  margin-block: var(--size-32);
+}
+
+.identity-detail h6 {
+  font-size: var(--fz-h4);
+  color: var(--light-text-primary);
+  font-weight: var(--fw-bold);
+}
+
+.identity-detail .id-primary {
+  color: var(--light-text-secondary);
+  font-weight: var(--fw-medium);
+}
+
+.identity-detail .status {
+  width: 80%;
+  margin: 0 auto;
+  padding-block: var(--size-8);
+  margin-top: var(--size-16);
+  background-color: color-mix(in srgb, var(--green-400), transparent 50%);
+  border-radius: var(--size-40);
+  color: var(--emerald-900);
+  font-weight: var(--fw-bold);
+}
