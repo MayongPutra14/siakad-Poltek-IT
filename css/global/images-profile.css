@@ -1,0 +1,26 @@
+/* .card-identity: container profile picture */
+/* .card-indentity {
+    position: relative;
+    display: inline-block;
+} */
+/* Image in menu dasboard and biodata  */
+#dashboard img,
+#biodata img {
+  width: calc(var(--size-100) * 2) ;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+/* green circle = active */
+/* #dashboard .image-container::before, #biodata .image-container::before {
+    position: absolute;
+    top: calc(var(--size-56) + var(--size-16));
+    right:calc(var(--size-100) + 20px);
+    content: "";
+    width: var(--size-24);
+    height: var(--size-24);
+    border-radius: 50%;
+    background-color: var(--green-300);
+    z-index: 1;
+} */

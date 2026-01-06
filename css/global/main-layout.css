@@ -8,7 +8,6 @@
   height: 100vh;
 }
 
-
 #header {
   grid-area: header;
 }
@@ -18,20 +17,48 @@
 }
 
 #main-content {
-  display: none;
   grid-area: content;
   overflow-y: auto;
   background-color: var(--blue-9);
 }
 
+/* dashboard menu */
+
+/* SIAKAD Style in mobile */
 @media (max-width: 48rem) {
   .dashboard-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
     grid-template-areas:
-      "header"
-      "content";
+    "header"
+    "content";
+  }
+}
+
+/* Menu dashboard in mobile */
+#dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: var(--size-16);
+}
+/* Menu dashboard in Desktop */
+@media(min-width: 48rem) {
+  #dashboard .student-profile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "card-indentity announcement-container announcement-container"; 
+    gap: var(--size-12);
   }
 
- 
+  .student-profile .announcement-container {
+    grid-area: announcement-container;
+  }
+
+  #dashboard .statistic-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--size-12)
+  }
 }

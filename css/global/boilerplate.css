@@ -1,47 +1,46 @@
 :root {
+  /* Light Mode */
+  --light-bg-primary: #f9fafb;
+  --light-bg-secondary: #ffffff;
+  --light-bg-hover: #f3f4f6;
+  --light-border: #e5e7eb;
+  --light-text-primary: #1f2937;
+  --light-text-secondary: #4b5563;
+  --light-text-tertiary: #9ca3af;
 
-/* Light Mode */
---light-bg-primary: #F9FAFB;
---light-bg-secondary: #FFFFFF;
---light-bg-hover: #F3F4F6;
---light-border: #E5E7EB;
---light-text-primary: #1F2937;
---light-text-secondary: #4B5563;
---light-text-tertiary: #9CA3AF;
+  /* Dark Mode */
+  --dark-bg-primary: #111827;
+  --dark-bg-secondary: #1f2937;
+  --dark-bg-hover: #374151;
+  --dark-border: #374151;
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #d1d5db;
+  --dark-text-tertiary: #9ca3af;
 
-/* Dark Mode */
---dark-bg-primary: #111827;
---dark-bg-secondary: #1F2937;
---dark-bg-hover: #374151;
---dark-border: #374151;
---dark-text-primary: #FFFFFF;
---dark-text-secondary: #D1D5DB;
---dark-text-tertiary: #9CA3AF;
+  /* Green Shades */
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green-200: #bbf7d0;
+  --green-300: #68f263;
+  --green-400: #4ade80; /* Gradient start */
+  --green-500: #22c55e; /* Primary */
+  --green-800: #166534; /* Dark mode text */
+  --green-900: #14532d; /* Dark badges */
 
-/* Green Shades */
---green-50: #F0FDF4;
---green-100: #DCFCE7;
---green-200: #BBF7D0;
---green-300: #68f263;
---green-400: #4ADE80;   /* Gradient start */
---green-500: #22C55E;   /* Primary */
---green-800: #166534;   /* Dark mode text */
---green-900: #14532D;   /* Dark badges */
+  /* Emerald Shades */
+  --emerald-100: #d1fae5;
+  --emerald-200: #a7f3d0;
+  --emerald-500: #10b981; /* Secondary primary */
+  --emerald-800: #065f46;
+  --emerald-900: #064e3b;
 
-/* Emerald Shades */
---emerald-100: #D1FAE5;
---emerald-200: #A7F3D0;
---emerald-500: #10B981; /* Secondary primary */
---emerald-800: #065F46;
---emerald-900: #064E3B;
+  /* Teal */
+  --teal-500: #14b8a6;
 
-/* Teal */
---teal-500: #14B8A6;
+  /* Lime */
+  --lime-500: #84cc16;
 
-/* Lime */
---lime-500: #84CC16;
-
-/* gray */
+  /* gray */
   --gray-1: #111113;
   --gray-2: #19191b;
   --gray-3: #222325;
@@ -55,24 +54,47 @@
   --gray-11: #b2b3bd;
   --gray-12: #eeeef0;
 
-/* Shadow System - Soft to Strong */
-/* XS - Extra Soft (barely visible, subtle depth) */
---shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-/* SM - Soft (gentle elevation) */
---shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
-             0 1px 2px -1px rgba(0, 0, 0, 1);
-/* MD - Medium (clear elevation, good for cards) */
---shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-             0 2px 4px -2px rgba(0, 0, 0, 0.1);
-/* LG - Large (prominent elevation) */
---shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-             0 4px 6px -4px rgba(0, 0, 0, 0.1);
-/* XL - Extra Large (floating effect) */
---shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-             0 8px 10px -6px rgba(0, 0, 0, 0.1);
-/* 2XL - Double Extra Large (dramatic depth) */
---shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  /* Shadow System - Soft to Strong */
+  /* XS - Extra Soft (barely visible, subtle depth) */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* SM - Soft (gentle elevation) */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 1);
+  /* MD - Medium (clear elevation, good for cards) */
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  /* LG - Large (prominent elevation) */
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  /* XL - Extra Large (floating effect) */
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  /* 2XL - Double Extra Large (dramatic depth) */
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
+  /* Special shadow card */
+  /* blue card */
+  --shadow-blue: 0 10px 30px rgba(102, 173, 255, 0.3),
+    0 5px 15px rgba(102, 173, 255, 0.2), 0 2px 5px rgba(102, 173, 255, 0.1);
+  /* hover effect */
+  --shadow-blue-hover: 0 20px 50px rgba(102, 173, 255, 0.4),
+    0 10px 25px rgba(102, 173, 255, 0.3), 0 5px 10px rgba(102, 173, 255, 0.2),
+    0 0 40px rgba(102, 173, 255, 0.3);
+
+  /* Green Card */
+  --shadow-green: 0 10px 30px rgba(46, 216, 182, 0.3),
+    0 5px 15px rgba(46, 216, 182, 0.2), 0 2px 5px rgba(46, 216, 182, 0.1);
+  /* hover effect */
+  --shadow-green-hover: 0 20px 50px rgba(46, 216, 182, 0.4),
+    0 10px 25px rgba(46, 216, 182, 0.3), 0 5px 10px rgba(46, 216, 182, 0.2),
+    0 0 40px rgba(46, 216, 182, 0.3);
+
+  /* Orange card */
+  --shadow-orange: 0 10px 30px rgba(255, 133, 51, 0.3),
+    0 5px 15px rgba(255, 133, 51, 0.2), 0 2px 5px rgba(255, 133, 51, 0.1);
+  /* hover effect */
+  --shadow-orange-hover: 0 20px 50px rgba(255, 133, 51, 0.4),
+    0 10px 25px rgba(255, 133, 51, 0.3), 0 5px 10px rgba(255, 133, 51, 0.2),
+    0 0 40px rgba(255, 133, 51, 0.3);
 
   /* Spacing Scale (4px Multiplier) */
   --size-0: 0;
@@ -92,9 +114,6 @@
   --size-64: 4rem; /* 64px */
   --size-80: 5rem; /* 80px */
   --size-100: 6.25rem; /* 100px */
-
-
-
 }
 
 /* .dark,
@@ -131,7 +150,6 @@
   --gray-track: #6c6e79;
 } */
 
-
 /* blue from radix
 
 
@@ -163,7 +181,7 @@
 
  */
 
- *,
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -177,13 +195,15 @@
 }
 
 html {
+  font-family: var(--font-poppins);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light-bg-primary);
 }
 
 section {
-  padding-top: var(--size-100);
+  padding-inline: var(--size-16);
 }
 
 h1,
@@ -191,7 +211,6 @@ h2,
 h4,
 h5,
 h6 {
-  font-family: var(--Inter);
   text-wrap: balance;
   margin: 0;
 }
@@ -202,7 +221,6 @@ a {
 }
 
 p {
-  font-family: var(--font-poppins);
   line-height: var(--lh-normal);
   font-weight: var(--fw-regular);
   margin: 0;

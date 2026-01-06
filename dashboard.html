@@ -65,7 +65,7 @@
               <a href="#"><span class="material-symbols-rounded sidebar-icn">settings</span>Setting</a>
             </li>
             <!-- logout -->
-            <li class="">
+            <li>
               <a href="#" class="logout"><span class="material-symbols-rounded sidebar-icn logout">logout</span>Logout</a>
             </li>
           </ul>
@@ -77,19 +77,17 @@
         <!-- MENU DASHBOARD -->
         <section id="dashboard" class="dashboard-content">
           <!-- CARD PROFILE & ANNOUNCEMENT -->
-          <div class="colomn1">
+          <div class="student-profile">
             <!-- Profile Section -->
             <article class="card-indentity">
-              <picture
-                ><img
-                  src="./assets/images/github Profile.jpg"
-                  alt="Profile Picture"
-              /></picture>
+              <div class="image-container">
+                <img src="./assets/images/github Profile.jpg" alt="Profile Picture">
+              </div>
               <div class="identity-detail">
-                <h2>Gilang Mayong</h2>
-                <span>1234567890</span>
-                <span>Teknik Rekayasa Komputer</span>
-                <span>Active</span>
+                <h5>Gilang Mayong</h5>
+                <span class="id-primary">327446679832</span>
+                <span class="id-primary">Teknik Rekayasa Komputer</span>
+                <span class="status">Active</span>
               </div>
             </article>
 
@@ -97,67 +95,76 @@
             <article class="announcement-container">
               <div class="announcement-header">
                 <div class="title-announcement">
-                  <img
-                    src="./assets/icons/announcement-icn.svg"
-                    alt="annountcement icon"
-                  />
-                  <h3>Pengumuman</h3>
+                  <span class="material-symbols-rounded notif-icon" aria-label="Notificarion Icon">notifications</span>
+                  <h6>Pengumuman</h6>
                 </div>
-                <a href="/lihatsemua">Lihat Semua</a>
+                <a class="lihat-semua" href="/lihatsemua">Lihat Semua</a>
               </div>
-              <div class="announcement-card">
-                <h4>Pengumuman Ujian Akhir Semester</h4>
+              <div class="announcement-content">
+                <div class="announcement-article">
+                <h6>Pengumuman Ujian Akhir Semester</h6>
                 <p>
                   Ujian Akhir Semester akan dilaksanakan pada tanggal 10-15
                   Desember 2024. Pastikan untuk mempersiapkan diri dengan baik
                   dan mengikuti jadwal yang telah ditentukan.
                 </p>
               </div>
-              <div class="announcement-card">
-                <h4>Pendaftaran KRS Semester Ganjil 2025/2026</h4>
+              <div class="announcement-article">
+                <h6>Pendaftaran KRS Semester Ganjil 2025/2026</h6>
                 <p>
                   Pendaftaran KRS untuk semester ganjil tahun akademik 2025/2026
                   dibuka mulai tanggal 1 Agustus hingga 15 Agustus 2024.
                   Silahkan akses portal akademik untuk melakukan pendaftaran.
                 </p>
               </div>
-              <div class="announcement-card">
-                <h4>Libur Kuliah</h4>
+              <div class="announcement-article">
+                <h6>Pengumuman Libur Kuliah Semester Genap 2024/2025</h6>
                 <p>
                   Libur kuliah akan dilaksanakan pada tanggal 10-15 Desember
                   2024. Pastikan untuk mempersiapkan diri dengan baik dan
                   mengikuti jadwal yang telah ditentukan.
                 </p>
               </div>
+              </div>
+              
             </article>
           </div>
 
           <!-- CARD STATISTICS -->
-          <div class="column2">
+          <div class="statistic-container">
             <!-- STATISTICS IPK -->
-            <article class="card-statistics">
-              <img src="" alt="" />
-              <h3>Prestasi Akademik</h3>
+            <article class="card-statistics ipk-card card--blue">
+              <div class="statistic-header">
+                <span class="material-symbols-rounded statistic-icn" aria-label="Statistic Image">leaderboard</span>
+                <h5>Prestasi Akademik</h5>
+              </div>
               <p>IPS Semester Ini</p>
-              <span>3.75</span>
+              <span class="curr-value">3.75</span>
               <div class="ip-kumulatif">
                 <p>IPK Kumulatif</p>
-                <span>3.60</span>
+                <p>3.60</p>
               </div>
             </article>
             <!-- STATISTICS SKS -->
-            <article class="card-statistics">
-              <img src="" alt="" />
-              <h3>Total SKS</h3>
+            <article class="card-statistics card--orange">
+              <div class="statistic-header">
+                <span class="material-symbols-rounded statistic-icn" aria-label="Book Picture">import_contacts</span>
+                <h5>Total SKS</h5>
+              </div>
               <p>84/160 SKS</p>
-              <div class="progress-bar"></div>
-              <span>58% Completed</span>
+              <!-- <div class="progress-bar"></div> -->
+              <div class="progress-bar">
+                <progress id="file" value="50" max="100"> 70% </progress>
+                <p>58% Completed</p>
+              </div>
             </article>
             <!-- STATISTICS MATAKULIAH AKTIF SAAT INI -->
-            <article class="card-statistics">
-              <img src="" alt="" />
-              <h3>Mata Kuliah Aktif</h3>
-              <span>6</span>
+            <article class="card-statistics active-subject card--green">
+              <div class="statistic-header">
+                <span class="material-symbols-rounded statistic-icn" aria-label="Book Mark Image">book</span>
+                <h5>Mata Kuliah Aktif</h5>
+              </div>
+              <span class="curr-value">6</span>
               <p>Semester Ganjil 2024/2025</p>
             </article>
           </div>
@@ -167,11 +174,9 @@
         <section id="biodata" class="biodata-mahasiswa">
           <!-- COL-1 ROW-1 CARD INDENTITY -->
           <article class="card-indentity">
-            <picture
-              ><img
-                src="./assets/images/github Profile.jpg"
-                alt="Profile Picture"
-            /></picture>
+            <div class="image-container">
+              <img src="./assets/images/github Profile.jpg" alt="Profile Picture" />
+            </div>
             <div class="identity-detail">
               <h2>Gilang Mayong</h2>
               <span>Teknik Rekayasa Komputer</span>

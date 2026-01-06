@@ -80,7 +80,7 @@
 }
 
 /* menu logout color */
-.logout {
+.menu-setting .logout {
   color: red;
 }
 
@@ -104,7 +104,6 @@
   font-weight: var(--fw-medium);
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
-  
 }
 
 .sidebar-menu ul li a:hover {
@@ -113,7 +112,7 @@
 
 .sidebar-menu ul li a:active {
   transform: scale(0.97);
-  transition: transform 0.1s ease; 
+  transition: transform 0.1s ease;
 }
 
 .sidebar-menu ul li a.selected {
@@ -122,14 +121,13 @@
     var(--green-400),
     var(--teal-500)
   );
-  color: #FFF;
+  color: #fff;
   box-shadow: var(--shadow-md);
 }
 
 .sidebar-menu ul li a.selected .logout {
-  color: #FFF;
+  color: #fff;
 }
-
 
 /* Sidebar on mobile */
 @media (max-width: 48rem) {
@@ -154,10 +152,6 @@
 
 /* sidebar on desktop */
 @media (min-width: 48rem) {
-  .sidebar {
-    width: 100%;
-  }
-
   .sidebar-header .close-btn {
     display: none;
   }

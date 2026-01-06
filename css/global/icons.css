@@ -4,23 +4,32 @@
   line-height: 1px;
 }
 
+/* state: icon and teks in sidebar before clicked */
 .material-symbols-rounded.sidebar-icn {
   font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
   color: var(--light-text-tertiary);
-  margin-right: var(--size-16) ;
+  margin-right: var(--size-16);
   font-size: calc(var(--size-32) - 6px);
 }
 
+/* state: change color to white when menu is clicked */
 .sidebar-menu ul li a.selected .material-symbols-rounded.sidebar-icn {
   color: #fff;
 }
 
-/* logout icn */
+/* logout icn in sidebar menu */
 .material-symbols-rounded.logout {
   color: red;
 }
 
-.material-symbols-rounded.login-icn {
-  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
-  color: var(--gray-11);
+/* Dashboard : announcement notification icon */
+.announcement-header .notif-icon {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+  font-size: var(--size-32);
+}
+
+/* Dashboard: statistic card icon */
+.card-statistics .statistic-icn {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+  font-size: var(--size-32);
 }
