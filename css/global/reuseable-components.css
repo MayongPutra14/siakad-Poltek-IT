@@ -26,7 +26,7 @@
   width: 100%;
   padding: var(--size-40) var(--size-16);
 }
-
+/* style for card-profile(biodata) || krs & khs */
 .identity-detail {
   display: flex;
   flex-direction: column;
@@ -79,20 +79,23 @@
   color: #fff;
 }
 
-/* indentity in krs & khs */
-.menu-krs .student-identity {
+/* indentity-detial in krs & khs */
+.menu-krs .student-identity,
+.menu-khs .student-identity {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   padding-inline: var(--size-16);
 }
 
-.menu-krs .student-identity p {
+.menu-krs .student-identity p,
+.menu-khs .student-identity p {
   font-weight: var(--fw-semibold);
   color: var(--light-text-primary);
 }
 
-.menu-krs .student-identity span {
+.menu-krs .student-identity span,
+.menu-khs .student-identity span {
   font-weight: var(--fw-medium);
   color: var(--light-text-tertiary);
 }
@@ -100,6 +103,7 @@
 .tabel-relative {
   position: relative;
   margin-top: var(--size-40);
+  padding-bottom: var(--size-32);
 }
 
 .tabel-container {
@@ -129,7 +133,7 @@ thead {
 
 thead th {
   padding: var(--size-12);
-  text-align: left;
+  text-align: center;
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
   font-size: var(--fz-base);
@@ -155,16 +159,16 @@ tbody tr:nth-child(even) {
 /* view in desktop: indentity in krs & khs */
 @media (min-width: 48rem) {
   /* few data on krs */
-  .krs-container .student-identity .identity-detail {
+  .student-identity .identity-detail {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
-  
+
   /* header in desktop */
   thead th {
-    padding: var(--size-20);
-    text-align: left;
+    padding: var(--size-16);
+    text-align: center;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
     font-size: var(--fz-base);
@@ -172,3 +176,16 @@ tbody tr:nth-child(even) {
     white-space: nowrap;
   }
 }
+
+@media screen and (max-width: 48rem) {
+        /* Tampilkan scroll hint */
+        .tabel-relative::after {
+          content: "← Geser untuk melihat lebih banyak →";
+          display: block;
+          text-align: center;
+          padding: 15px;
+          color: #9ca3af;
+          font-size: 12px;
+          font-style: italic;
+        }
+      }
