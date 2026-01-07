@@ -64,69 +64,59 @@
   gap: var(--size-36);
   padding: var(--size-32) var(--size-16);
 }
-/* title of detail biodata container */
-.detail-biodata .biodata-header {
-    padding: var(--size-12) var(--size-16);
-    background-image: linear-gradient(
-        to right,
-    var(--green-400),
-    var(--teal-500)
-  );
-  color: #fff;
-}
 
 /* data */
 .biodata-item {
-    display: flex;
-    align-items: center;
-    gap: var(--size-8);
-    background-color: var(--green-50);
-    padding: var(--size-24) var(--size-16); 
-    border: 1px solid var(--emerald-500);
-    border-radius: var(--size-8);    
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: var(--size-8);
+  background-color: var(--green-50);
+  padding: var(--size-24) var(--size-16);
+  border: 1px solid var(--emerald-500);
+  border-radius: var(--size-8);
+  overflow: hidden;
 }
 
 .data-value p {
-    font-weight: var(--fw-semibold);
-    color: var(--green-500);
+  font-weight: var(--fw-semibold);
+  color: var(--green-500);
 }
 
 .data-value span {
-    display: block;
-    color: var(--light-text-secondary);
-    font-weight: var(--fw-medium);
-    font-size: var(--fz-sm);
-    word-break: break-all;
+  display: block;
+  color: var(--light-text-secondary);
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-sm);
+  word-break: break-all;
 }
 
 /* A Reminder */
 .last-update-data {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--size-12);
-    color: #fff;
-    background-color: #60A5FA;
-    padding: var(--size-16);
-    border: 1px solid #1d4ed8;
-    border-radius: var(--size-8);
-    box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--size-12);
+  color: #fff;
+  background-color: #60a5fa;
+  padding: var(--size-16);
+  border: 1px solid #1d4ed8;
+  border-radius: var(--size-8);
+  box-shadow: var(--shadow-md);
 }
 
 .last-update-data p span {
-    font-weight: var(--fw-bold);
+  font-weight: var(--fw-bold);
 }
 
 /* biodata card: data in the contianer in desktop view */
-@media(min-width: 48rem) {
-section .biodata-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: var(--size-16);
-}
+@media (min-width: 48rem) {
+  section .biodata-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: var(--size-16);
+  }
 
-.biodata-card .biodata-item:nth-last-child(1) {
+  .biodata-card .biodata-item:nth-last-child(1) {
     grid-column: span 2;
-}
+  }
 }

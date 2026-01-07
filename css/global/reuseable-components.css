@@ -1,7 +1,7 @@
 /* Image in menu dasboard and menu biodata  */
 #dashboard img,
 #biodata img {
-  width: calc(var(--size-100) * 2) ;
+  width: calc(var(--size-100) * 2);
   border-radius: 50%;
   margin: 0 auto;
   box-shadow: var(--shadow-sm);
@@ -11,16 +11,16 @@
 /* =============================== */
 /* profile-card container and announcement-container*/
 .card-indentity,
-.announcement-container, .detail-biodata {
+.announcement-container,
+.detail-biodata {
   background-color: var(--light-bg-secondary);
-  /* margin-top: var(--size-16);  */
   border: 1px solid var(--light-border);
   border-radius: var(--size-8);
   box-shadow: var(--shadow-md);
   overflow: hidden;
 }
 
-/* card indentity */
+/* student profile: card indentity */
 .card-indentity {
   text-align: center;
   width: 100%;
@@ -34,7 +34,7 @@
   margin-block: var(--size-32);
 }
 
-.identity-detail h6 {
+.identity-detail h5 {
   font-size: var(--fz-h4);
   color: var(--light-text-primary);
   font-weight: var(--fw-bold);
@@ -54,4 +54,121 @@
   border-radius: var(--size-40);
   color: var(--emerald-900);
   font-weight: var(--fw-bold);
+}
+
+/* Header: Biodata, Kartu Rencana Studi, Kartu Hasil Studi, Indeks Prestasi Kumulatif */
+.krs-container,
+.khs-container {
+  background-color: var(--light-bg-secondary);
+  border: 1px solid var(--light-border);
+  border-radius: var(--size-8);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+/* style: background-color and font-color */
+.biodata-header,
+.krs-header,
+.khs-header,
+.ipk-header {
+  padding: var(--size-12) var(--size-16);
+  background-image: linear-gradient(
+    to right,
+    var(--green-400),
+    var(--teal-500)
+  );
+  color: #fff;
+}
+
+/* indentity in krs & khs */
+.menu-krs .student-identity {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding-inline: var(--size-16);
+}
+
+.menu-krs .student-identity p {
+  font-weight: var(--fw-semibold);
+  color: var(--light-text-primary);
+}
+
+.menu-krs .student-identity span {
+  font-weight: var(--fw-medium);
+  color: var(--light-text-tertiary);
+}
+
+.tabel-relative {
+  position: relative;
+  margin-top: var(--size-40);
+}
+
+.tabel-container {
+  width: 100%;
+  padding: var(--size-16);
+  border: none;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border: none;
+  white-space: nowrap;
+  border-collapse: collapse;
+  border-radius: var(--size-8);
+  overflow: hidden;
+}
+
+thead {
+  background-image: linear-gradient(
+    to right,
+    var(--green-400),
+    var(--teal-500)
+  );
+  color: #fff;
+}
+
+thead th {
+  padding: var(--size-12);
+  text-align: left;
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  font-size: var(--fz-base);
+  letter-spacing: var(--ls-wide);
+  white-space: nowrap;
+}
+
+th,
+td {
+  padding: var(--size-12);
+}
+
+/* odd line lighter */
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* even line - darker */
+tbody tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+
+/* view in desktop: indentity in krs & khs */
+@media (min-width: 48rem) {
+  /* few data on krs */
+  .krs-container .student-identity .identity-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  
+  /* header in desktop */
+  thead th {
+    padding: var(--size-20);
+    text-align: left;
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    font-size: var(--fz-base);
+    letter-spacing: var(--ls-wide);
+    white-space: nowrap;
+  }
 }

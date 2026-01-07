@@ -36,7 +36,7 @@
 
 /* menu biodata: style icon*/
 .biodata-item .biodata-icons {
-  color: #FFF;
+  color: #fff;
   background-color: var(--green-500);
   padding: var(--size-8);
   border-radius: var(--size-16);
@@ -50,4 +50,47 @@
   padding: var(--size-4);
   background-color: #1d4ed8;
   border-radius: var(--size-56);
+}
+
+/* printer-icon: krs,khs,ipk */
+.material-symbols-rounded.printer-icon {
+  position: absolute;
+  top: calc(var(--size-56) * -1);
+  right: var(--size-16);
+  padding: var(--size-12) var(--size-16);
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+  font-size: var(--fz-h4);
+  color: #fff;
+  background-color: #2563eb;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--size-8);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.material-symbols-rounded.printer-icon::after {
+  display: block;
+  text-align: center;
+  padding-top: 2px;
+  content: "Cetak";
+  font-size: 5px;
+}
+
+.material-symbols-rounded.printer-icon:hover {
+  background-color: #1d4ed8;
+}
+
+.material-symbols-rounded.printer-icon:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+/* status icon KRS: Approved and date */
+.material-symbols-rounded.status-icon {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+  font-size: var(--fz-base);
+  color: var(--green-500);
+  background-color: var(--green-100);
+  border-radius: 50%;
+  padding: var(--size-8);
 }

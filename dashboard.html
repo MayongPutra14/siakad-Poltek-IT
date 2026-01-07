@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Poltek IT</title>
-
     <!-- MY CUSTOM CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -44,8 +43,8 @@
         <nav class="sidebar-menu">
           <ul class="menu menu-akademik">
             <!-- dasboard -->
-            <li class="selected">
-              <a href="#"
+            <li>
+              <a class="selected" href="#"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >dashboard</span
                 >Dashboard</a
@@ -107,7 +106,7 @@
       <!-- MAIN CONTENT -->
       <main id="main-content" class="main-content">
         <!-- MENU DASHBOARD -->
-        <section id="dashboard" class="dashboard-content" style="display: block">
+        <section id="dashboard" class="dashboard-content" style="display: none">
           <!-- CARD PROFILE & ANNOUNCEMENT -->
           <div class="student-profile">
             <!-- Profile Section -->
@@ -222,7 +221,7 @@
         </section>
 
         <!-- MENU BIODATA MAHASISWA -->
-        <section id="biodata" class="biodata-mahasiswa">
+        <section id="biodata" class="biodata-mahasiswa" style="display: none">
           <!-- COL-1 ROW-1 CARD INDENTITY -->
           <article class="card-indentity">
             <div class="image-container">
@@ -344,7 +343,7 @@
                   <p class="label">Alamat:</p>
                   <span class="value"
                     >Perum Permata Regency jl. Kristal Blok E8 No 56, RT 005 RW
-                      014 Cikampek Utara, Kec. Kotabaru, Karawang Jawa Barat.
+                    014 Cikampek Utara, Kec. Kotabaru, Karawang Jawa Barat.
                   </span>
                 </div>
               </div>
@@ -353,287 +352,305 @@
 
           <!-- COL-1 ROW-2 INFORMATION LAST UPDATE DATA -->
           <article class="last-update-data">
-            <span class="material-symbols-rounded exclamation-icon">exclamation</span>
+            <span class="material-symbols-rounded exclamation-icon"
+              >exclamation</span
+            >
             <p>
-              Data Anda terakhir di perbarui pada <span>20 Oktober 2023</span>. Hubungi
-              bagian akademik jika terdapat kesalahan pada data Anda.
+              Data Anda terakhir di perbarui pada <span>20 Oktober 2023</span>.
+              Hubungi bagian akademik jika terdapat kesalahan pada data Anda.
             </p>
           </article>
         </section>
 
         <!-- MENU KRS-->
-        <section id="krs" class="menu-krs" style="display: block;">
-          <!-- TITLE KRS COL-1 -->
-          <div class="title-krs">
-            <div class="title-page">
-              <h3>Kartu Rencana Studi (KRS)</h3>
-              <span>Semester Ganjil 2024/2025</span>
-            </div>
-            <img src="./assets/icons/printer-icn.svg" alt="" />
-          </div>
+        <section id="krs" class="menu-krs">
+          <div class="krs-container">
+            <!-- TITLE KRS COL-1 -->
+            <article class="krs-header">
+              <div class="title-page">
+                <h3>Kartu Rencana Studi (KRS)</h3>
+                <span>Semester Ganjil 2024/2025</span>
+              </div>
+            </article>
 
-          <!-- STUDENT IDENTITY -->
-          <div class="student-identity">
-            <div class="identity-detail">
-              <!-- NAMA MAHASISWA -->
-              <div class="biodata-krs">
-                <p class="label">Nama:</p>
-                <span class="value">Gilang Mayong Saputra</span>
+            <!-- STUDENT IDENTITY -->
+            <article class="student-identity">
+              <div class="identity-detail">
+                <!-- NAMA MAHASISWA -->
+                <div class="biodata-krs">
+                  <p class="label">Nama:</p>
+                  <span class="value">Gilang Mayong Saputra</span>
+                </div>
+                <!-- NOMOR INDUK MAHASISWA (NIM) -->
+                <div class="biodata-krs">
+                  <p class="label">NIM:</p>
+                  <span class="value">1234567890</span>
+                </div>
+                <!-- PROGRAM STUDI -->
+                <div class="biodata-krs">
+                  <p class="label">Program Studi:</p>
+                  <span class="value">Teknik Rekayasa Komputer</span>
+                </div>
+                <!-- SEMESTER & TAHUN AKADEMIK -->
+                <div class="biodata-krs">
+                  <p class="label">Semester / Tahun Akademik:</p>
+                  <span class="value">3 / 2024/2025</span>
+                </div>
               </div>
-              <!-- NOMOR INDUK MAHASISWA (NIM) -->
-              <div class="biodata-krs">
-                <p class="label">NIM:</p>
-                <span class="value">1234567890</span>
-              </div>
-              <!-- PROGRAM STUDI -->
-              <div class="biodata-krs">
-                <p class="label">Program Studi:</p>
-                <span class="value">Teknik Rekayasa Komputer</span>
-              </div>
-              <!-- SEMESTER & TAHUN AKADEMIK -->
-              <div class="biodata-krs">
-                <p class="label">Semester / Tahun Akademik:</p>
-                <span class="value">3 / 2024/2025</span>
-              </div>
-            </div>
-          </div>
+            </article>
 
-          <!-- TABLE KRS -->
-          <table border="1" cellpadding="8" cellspacing="0">
-            <!-- TABLE HEADER -->
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>KODE MATAKULIAH</th>
-                <th>NAMA MATAKULIAH</th>
-                <th>SKS</th>
-                <th>DOSEN PENGAMPU</th>
-                <th>KET</th>
-              </tr>
-            </thead>
-            <!-- TABLE BODY -->
-            <tbody>
-              <!-- DATA 1 -->
-              <tr>
-                <td>1</td>
-                <td>TIF201</td>
-                <td>Pemrograman Web</td>
-                <td>3</td>
-                <td>Dr. Ahmad Fauzi, M.Kom</td>
-                <td>Wajib</td>
-              </tr>
-              <!-- DATA 2 -->
-              <tr>
-                <td>2</td>
-                <td>TIF202</td>
-                <td>Struktur Data</td>
-                <td>3</td>
-                <td>Siti Nurhaliza, S.Kom., M.T</td>
-                <td>Wajib</td>
-              </tr>
-              <!-- DATA 3 -->
-              <tr>
-                <td>3</td>
-                <td>TIF203</td>
-                <td>Sistem Operasi</td>
-                <td>3</td>
-                <td>Budi Santoso, M.Kom</td>
-                <td>Wajib</td>
-              </tr>
-              <!-- DATA 4 -->
-              <tr>
-                <td>4</td>
-                <td>TIF204</td>
-                <td>Basis Data</td>
-                <td>3</td>
-                <td>Rina Wahyuni, S.Kom., M.Kom</td>
-                <td>Wajib</td>
-              </tr>
-              <!-- DATA 5 -->
-              <tr>
-                <td>5</td>
-                <td>TIF205</td>
-                <td>Jaringan Komputer</td>
-                <td>3</td>
-                <td>Ir. Dedi Kurniawan, M.T</td>
-                <td>Wajib</td>
-              </tr>
-              <!-- DATA 6 -->
-              <tr>
-                <td>6</td>
-                <td>TIF206</td>
-                <td>Keamanan Informasi</td>
-                <td>2</td>
-                <td>Agus Prasetyo, M.Kom</td>
-                <td>Pilihan</td>
-              </tr>
-              <!-- DATA 7 -->
-              <tr>
-                <td>7</td>
-                <td>TIF207</td>
-                <td>Rekayasa Perangkat Lunak</td>
-                <td>3</td>
-                <td>Dewi Lestari, S.T., M.T</td>
-                <td>Wajib</td>
-              </tr>
-              <!-- TOTAL SKS -->
-              <tr>
-                <td colspan="3"><strong>Total SKS</strong></td>
-                <td><strong>20</strong></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="status-disetujui">
-            <!-- STATUS DISSETUJUI -->
-            <div class="status-detail">
-              <img src="./assets/icons/check-icn.svg" alt="" />
-              <p class="label">Status:</p>
-              <span class="value">Disetujui</span>
-            </div>
-            <!-- TANGGAL DISETUJUI -->
-            <div class="date-approved">
-              <img src="./assets/icons/krs-icn.svg" alt="" />
-              <p class="label">Tgl:</p>
-              <span class="value">14/08/2024</span>
+            <!-- TABLE KRS -->
+            <div class="tabel-relative">
+              <span class="material-symbols-rounded printer-icon">print</span>
+              <!-- tabel -->
+              <div class="tabel-container">
+                <table>
+                  <!-- TABLE HEADER -->
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>KODE MATAKULIAH</th>
+                      <th>NAMA MATAKULIAH</th>
+                      <th>SKS</th>
+                      <th>DOSEN PENGAMPU</th>
+                      <th>KET</th>
+                    </tr>
+                  </thead>
+                  <!-- TABLE BODY -->
+                  <tbody>
+                    <!-- DATA 1 -->
+                    <tr>
+                      <td>1</td>
+                      <td>TIF201</td>
+                      <td>Pemrograman Web</td>
+                      <td>3</td>
+                      <td>Dr. Ahmad Fauzi, M.Kom</td>
+                      <td>Wajib</td>
+                    </tr>
+                    <!-- DATA 2 -->
+                    <tr>
+                      <td>2</td>
+                      <td>TIF202</td>
+                      <td>Struktur Data</td>
+                      <td>3</td>
+                      <td>Siti Nurhaliza, S.Kom., M.T</td>
+                      <td>Wajib</td>
+                    </tr>
+                    <!-- DATA 3 -->
+                    <tr>
+                      <td>3</td>
+                      <td>TIF203</td>
+                      <td>Sistem Operasi</td>
+                      <td>3</td>
+                      <td>Budi Santoso, M.Kom</td>
+                      <td>Wajib</td>
+                    </tr>
+                    <!-- DATA 4 -->
+                    <tr>
+                      <td>4</td>
+                      <td>TIF204</td>
+                      <td>Basis Data</td>
+                      <td>3</td>
+                      <td>Rina Wahyuni, S.Kom., M.Kom</td>
+                      <td>Wajib</td>
+                    </tr>
+                    <!-- DATA 5 -->
+                    <tr>
+                      <td>5</td>
+                      <td>TIF205</td>
+                      <td>Jaringan Komputer</td>
+                      <td>3</td>
+                      <td>Ir. Dedi Kurniawan, M.T</td>
+                      <td>Wajib</td>
+                    </tr>
+                    <!-- DATA 6 -->
+                    <tr>
+                      <td>6</td>
+                      <td>TIF206</td>
+                      <td>Keamanan Informasi</td>
+                      <td>2</td>
+                      <td>Agus Prasetyo, M.Kom</td>
+                      <td>Pilihan</td>
+                    </tr>
+                    <!-- DATA 7 -->
+                    <tr>
+                      <td>7</td>
+                      <td>TIF207</td>
+                      <td>Rekayasa Perangkat Lunak</td>
+                      <td>3</td>
+                      <td>Dewi Lestari, S.T., M.T</td>
+                      <td>Wajib</td>
+                    </tr>
+                    <!-- TOTAL SKS -->
+                    <tr>
+                      <td colspan="3"><strong>Total SKS</strong></td>
+                      <td><strong>20</strong></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- STATUS AGREEMENT -->
+              <div class="status-disetujui">
+                <!-- STATUS DISSETUJUI -->
+                <div class="status-detail">
+                  <span class="material-symbols-rounded status-icon"
+                    >check</span
+                  >
+                  <p class="label">Status:</p>
+                  <span class="value">Disetujui</span>
+                </div>
+                <!-- TANGGAL DISETUJUI -->
+                <div class="status-detail">
+                  <span class="material-symbols-rounded status-icon"
+                    >edit_calendar</span
+                  >
+                  <p class="label">Tanggal:</p>
+                  <span class="value">14/08/2024</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <!-- MENU KHS -->
-        <section id="khs" class="menu-khs" style="display: block;">
-          <!-- TITLE KHS COL-1 -->
-          <div class="title-khs">
-            <div class="title-page">
-              <h3>Kartu Hasil Studi (KHS)</h3>
-              <span>Lihat dan cetak hasil studi Anda</span>
+        <section id="khs" class="menu-khs">
+          <div class="khs-container">
+            <!-- TITLE KHS COL-1 -->
+            <article class="khs-header">
+              <div class="title-page">
+                <h3>Kartu Hasil Studi (KHS)</h3>
+                <p>Lihat dan cetak hasil studi Anda</p>
+              </div>
+            </article>
+
+            <!-- STUDENT IDENTITY -->
+            <article class="identity-detail">
+              <!-- NOMOR INDUK MAHASISWA (NIM) -->
+              <div class="biodata-khs">
+                <p class="label">NIM:</p>
+                <span class="value">1234567890</span>
+              </div>
+
+              <!-- NAMA MAHASISWA -->
+              <div class="biodata-khs">
+                <p class="label">Nama:</p>
+                <span class="value">Gilang Mayong Saputra</span>
+              </div>
+
+              <!-- JENJANG -->
+              <div class="biodata-khs">
+                <p class="label">Jenjang:</p>
+                <span class="value">Diploma / D-IV</span>
+              </div>
+
+              <!-- TAHUN AKADEMIK -->
+              <div class="biodata-khs">
+                <p class="label">Tahun Akademik:</p>
+                <span class="value">2024/2025</span>
+              </div>
+
+              <!-- PROGRAM STUDI -->
+              <div class="biodata-khs">
+                <p class="label">Program Studi:</p>
+                <span class="value">Teknik Rekayasa Komputer</span>
+              </div>
+
+              <!-- SEMESTER & TAHUN AKADEMIK -->
+              <div class="biodata-khs">
+                <p class="label">Semester:</p>
+                <span class="value">3 / Ganjil</span>
+              </div>
+            </article>
+
+            <!-- TABLE KHS -->
+            <div class="tabel-container">
+              <span class="material-symbols-rounded printer-icon">print</span>
+              <table border="1" cellpadding="5" cellspacing="0">
+                <!-- TABLE HEADER -->
+                <thead>
+                  <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">KODE MATAKULIAH</th>
+                    <th rowspan="2">NAMA MATAKULIAH</th>
+                    <th rowspan="2">SKS</th>
+                    <th colspan="3">NILAI</th>
+                    <th rowspan="2">SKS INDEKS</th>
+                  </tr>
+                  <!-- NILAI ANGKA HURUF DAN INDEKS -->
+                  <tr>
+                    <th>Angka</th>
+                    <th>Huruf</th>
+                    <th>Indeks</th>
+                  </tr>
+                </thead>
+                <!-- TABLE BODY -->
+                <tbody>
+                  <!-- DATA 1 -->
+                  <tr>
+                    <td>1</td>
+                    <td>TIF201</td>
+                    <td>Pemrograman Web</td>
+                    <td>3</td>
+                    <td>85,0</td>
+                    <td>A</td>
+                    <td>4</td>
+                    <td>8</td>
+                  </tr>
+                  <!-- DATA 2 -->
+                  <tr>
+                    <td>2</td>
+                    <td>TIF202</td>
+                    <td>Struktur Data</td>
+                    <td>3</td>
+                    <td>86,3</td>
+                    <td>A</td>
+                    <td>4</td>
+                    <td>12</td>
+                  </tr>
+                  <!-- DATA 3 -->
+                  <tr>
+                    <td>3</td>
+                    <td>TIF203</td>
+                    <td>Sistem Operasi</td>
+                    <td>3</td>
+                    <td>82,5</td>
+                    <td>A</td>
+                    <td>4</td>
+                    <td>12</td>
+                  </tr>
+                  <!-- TOTAL SKS  -->
+                  <tr>
+                    <td colspan="3"><strong>Jumlah SKS</strong></td>
+                    <td><strong>9</strong></td>
+                    <td colspan="3"></td>
+                    <td>32</td>
+                  </tr>
+                  <!-- INDEKS PRESTASI SEMESTER (IPS) -->
+                  <tr>
+                    <td colspan="3">
+                      <strong>Indeks Prestasi Semester (IPS)</strong>
+                    </td>
+                    <td colspan="4"></td>
+                    <td><strong>3.56</strong></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <img src="./assets/icons/printer-icn.svg" alt="" />
           </div>
-
-          <!-- STUDENT IDENTITY -->
-          <div class="identity-detail">
-            <!-- NOMOR INDUK MAHASISWA (NIM) -->
-            <div class="biodata-khs">
-              <p class="label">NIM:</p>
-              <span class="value">1234567890</span>
-            </div>
-
-            <!-- NAMA MAHASISWA -->
-            <div class="biodata-khs">
-              <p class="label">Nama:</p>
-              <span class="value">Gilang Mayong Saputra</span>
-            </div>
-
-            <!-- JENJANG -->
-            <div class="biodata-khs">
-              <p class="label">Jenjang:</p>
-              <span class="value">Diploma / D-IV</span>
-            </div>
-
-            <!-- TAHUN AKADEMIK -->
-            <div class="biodata-khs">
-              <p class="label">Tahun Akademik:</p>
-              <span class="value">2024/2025</span>
-            </div>
-
-            <!-- PROGRAM STUDI -->
-            <div class="biodata-khs">
-              <p class="label">Program Studi:</p>
-              <span class="value">Teknik Rekayasa Komputer</span>
-            </div>
-
-            <!-- SEMESTER & TAHUN AKADEMIK -->
-            <div class="biodata-khs">
-              <p class="label">Semester:</p>
-              <span class="value">3 / Ganjil</span>
-            </div>
-          </div>
-
-          <!-- TABLE KHS -->
-          <table border="1" cellpadding="5" cellspacing="0">
-            <!-- TABLE HEADER -->
-            <thead>
-              <tr>
-                <th rowspan="2">No</th>
-                <th rowspan="2">KODE MATAKULIAH</th>
-                <th rowspan="2">NAMA MATAKULIAH</th>
-                <th rowspan="2">SKS</th>
-                <th colspan="3">NILAI</th>
-                <th rowspan="2">SKS INDEKS</th>
-              </tr>
-              <!-- NILAI ANGKA HURUF DAN INDEKS -->
-              <tr>
-                <th>Angka</th>
-                <th>Huruf</th>
-                <th>Indeks</th>
-              </tr>
-            </thead>
-            <!-- TABLE BODY -->
-            <tbody>
-              <!-- DATA 1 -->
-              <tr>
-                <td>1</td>
-                <td>TIF201</td>
-                <td>Pemrograman Web</td>
-                <td>3</td>
-                <td>85,0</td>
-                <td>A</td>
-                <td>4</td>
-                <td>8</td>
-              </tr>
-              <!-- DATA 2 -->
-              <tr>
-                <td>2</td>
-                <td>TIF202</td>
-                <td>Struktur Data</td>
-                <td>3</td>
-                <td>86,3</td>
-                <td>A</td>
-                <td>4</td>
-                <td>12</td>
-              </tr>
-              <!-- DATA 3 -->
-              <tr>
-                <td>3</td>
-                <td>TIF203</td>
-                <td>Sistem Operasi</td>
-                <td>3</td>
-                <td>82,5</td>
-                <td>A</td>
-                <td>4</td>
-                <td>12</td>
-              </tr>
-              <!-- TOTAL SKS  -->
-              <tr>
-                <td colspan="3"><strong>Jumlah SKS</strong></td>
-                <td><strong>9</strong></td>
-                <td colspan="3"></td>
-                <td>32</td>
-              </tr>
-              <!-- INDEKS PRESTASI SEMESTER (IPS) -->
-              <tr>
-                <td colspan="3">
-                  <strong>Indeks Prestasi Semester (IPS)</strong>
-                </td>
-                <td colspan="4"></td>
-                <td><strong>3.56</strong></td>
-              </tr>
-            </tbody>
-          </table>
         </section>
 
         <!-- MENU IPK KUMULATIF -->
-        <section id="ipk" class="menu-ipk" style="display: block;">
+        <section id="ipk" class="menu-ipk">
           <!-- TITLE IPK COL-1 -->
-          <div class="title-ipk">
+          <article class="ipk-header">
             <div class="title-page">
               <h3>Indeks Prestasi Kumulatif (IPK)</h3>
-              <span>Rekapitulasi Indeks Prestasi Kumulatif Anda</span>
+              <p>Rekapitulasi Indeks Prestasi Kumulatif Anda</p>
             </div>
-            <img src="./assets/icons/printer-icn.svg" alt="" />
-          </div>
+            <!-- <span class="material-symbols-rounded printer-icon">print</span> -->
+          </article>
 
           <!-- CARD MAIN IPK -->
           <article class="card-main-ipk">
@@ -679,63 +696,65 @@
           <article class="detail-riwayat-studi">
             <h4>Detail Riwayat Studi</h4>
             <p>Menampilkan 6 semester</p>
-            <table border="1" cellpadding="5" cellspacing="0">
-              <!-- TABLE HEAD -->
-              <thead>
-                <tr>
-                  <th>Semester</th>
-                  <th>Tahun Ajaran</th>
-                  <th>SKS Diambil</th>
-                  <th>SKS Lulus</th>
-                  <th>IPS</th>
-                  <th>IPK</th>
-                  <th>status</th>
-                </tr>
-              </thead>
-              <!-- TABLE BODY -->
-              <tbody>
-                <!-- DATA 1 -->
-                <tr>
-                  <td>Semester 1</td>
-                  <td>2023 / 2024 Ganjil</td>
-                  <td>20</td>
-                  <td>20</td>
-                  <td>3.45</td>
-                  <td>3.45</td>
-                  <td>Aktif</td>
-                </tr>
-                <!-- DATA 2 -->
-                <tr>
-                  <td>Semester 2</td>
-                  <td>2023 / 2024 Genap</td>
-                  <td>22</td>
-                  <td>22</td>
-                  <td>3.60</td>
-                  <td>3.52</td>
-                  <td>Aktif</td>
-                </tr>
-                <!-- DATA 3 -->
-                <tr>
-                  <td>Semester 3</td>
-                  <td>2024 / 2025 Ganjil</td>
-                  <td>21</td>
-                  <td>21</td>
-                  <td>3.70</td>
-                  <td>3.58</td>
-                  <td>Aktif</td>
-                </tr>
-                <!-- DATA 4 -->
-                <tr>
-                  <td>Semester 4</td>
-                  <td>2024 / 2025 Genap</td>
-                  <td>20</td>
-                  <td>20</td>
-                  <td>3.80</td>
-                  <td>3.64</td>
-                  <td>Selesai</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="tabel-container">
+              <table border="1" cellpadding="5" cellspacing="0">
+                <!-- TABLE HEAD -->
+                <thead>
+                  <tr>
+                    <th>Semester</th>
+                    <th>Tahun Ajaran</th>
+                    <th>SKS Diambil</th>
+                    <th>SKS Lulus</th>
+                    <th>IPS</th>
+                    <th>IPK</th>
+                    <th>status</th>
+                  </tr>
+                </thead>
+                <!-- TABLE BODY -->
+                <tbody>
+                  <!-- DATA 1 -->
+                  <tr>
+                    <td>Semester 1</td>
+                    <td>2023 / 2024 Ganjil</td>
+                    <td>20</td>
+                    <td>20</td>
+                    <td>3.45</td>
+                    <td>3.45</td>
+                    <td>Aktif</td>
+                  </tr>
+                  <!-- DATA 2 -->
+                  <tr>
+                    <td>Semester 2</td>
+                    <td>2023 / 2024 Genap</td>
+                    <td>22</td>
+                    <td>22</td>
+                    <td>3.60</td>
+                    <td>3.52</td>
+                    <td>Aktif</td>
+                  </tr>
+                  <!-- DATA 3 -->
+                  <tr>
+                    <td>Semester 3</td>
+                    <td>2024 / 2025 Ganjil</td>
+                    <td>21</td>
+                    <td>21</td>
+                    <td>3.70</td>
+                    <td>3.58</td>
+                    <td>Aktif</td>
+                  </tr>
+                  <!-- DATA 4 -->
+                  <tr>
+                    <td>Semester 4</td>
+                    <td>2024 / 2025 Genap</td>
+                    <td>20</td>
+                    <td>20</td>
+                    <td>3.80</td>
+                    <td>3.64</td>
+                    <td>Selesai</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </article>
         </section>
 
