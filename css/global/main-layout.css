@@ -22,7 +22,7 @@
 }
 
 /* SIAKAD Style in mobile */
-@media (max-width: 48rem) {
+@media screen and (max-width: 48rem) {
   .dashboard-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
@@ -47,7 +47,7 @@ section.dashboard-content {
 }
 
 /* Menu dashboard in desktop */
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   section .student-profile {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,10 +73,26 @@ section.biodata-mahasiswa {
   grid-template-rows: auto;
 }
 /* Menu biodata in desktop */
-@media (min-width: 48rem) {
+@media screen and (min-width: 48rem) {
   section.biodata-mahasiswa {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     gap: var(--size-12);
   }
 }
+
+/* Menu ipk on mobile */
+.menu-ipk {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+/* menu prestasi kumulatif on desktop */
+@media screen and (min-width: 48rem) {
+  .ipk-container .container-detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--size-32);
+  }
+}
+

@@ -94,3 +94,20 @@
   border-radius: 50%;
   padding: var(--size-8);
 }
+
+/* chekc icon on prestasi kumulatif : .card-main-ipk */
+.material-symbols-rounded.check-rate-icon {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+  font-size: var(--fz-xs);
+  padding: var(--size-4);
+  margin-right: var(--size-8);
+  color: #fff;
+  background-color: var(--green-500);
+  border-radius: var(--size-56);
+}
+
+/* menu prestasi kumulatif : icons of detail-card  */
+.material-symbols-rounded.card-detail-icon {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+  margin-right: var(--size-8);
+}

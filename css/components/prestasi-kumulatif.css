@@ -1,0 +1,167 @@
+/* IPK header */
+.menu-ipk > * {
+  min-width: 0;
+}
+.ipk-header {
+  border-radius: var(--size-8);
+}
+
+/* containers card */
+.card-main-ipk,
+.ipk-chart,
+.total-sks,
+.ipk-tertinggi,
+.semester-terbaik,
+.detail-riwayat-studi {
+  box-shadow: var(--shadow-md);
+  border-radius: var(--size-8);
+}
+
+.card-main-ipk,
+.ipk-chart,
+.detail-riwayat-studi {
+  border: 1px solid var(--light-border);
+  
+}
+
+/* space-container */
+.card-main-ipk,
+.ipk-chart,
+.detail-riwayat-header {
+  margin-block: var(--size-20);
+  padding-inline: var(--size-16);
+}
+
+/* main IPK card */
+.card-main-ipk {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-block: var(--size-32);
+  padding-block: var(--size-16);
+  border-top: var(--size-12) solid transparent;
+  border-radius: var(--size-8);
+  background-image: linear-gradient(
+      var(--light-bg-secondary),
+      var(--light-bg-secondary)
+    ),
+    linear-gradient(to right, var(--green-400), var(--teal-500));
+  box-shadow: var(--shadow-md);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* Curren IPK */
+.card-main-ipk h5 {
+  color: var(--light-text-secondary);
+  margin-block: var(--size-12);
+}
+
+.card-main-ipk .ipk-value {
+  background-image: linear-gradient(
+    to right,
+    var(--green-400),
+    var(--teal-500)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: var(--fz-h2);
+  font-weight: var(--fw-semibold);
+}
+
+/* Highest IPK */
+.card-main-ipk .ipk-value::after {
+  content: "/ 4.00";
+  font-size: var(--fz-h5);
+  color: var(--light-text-tertiary);
+}
+
+/* rate-socre container */
+.card-main-ipk .rate-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--size-80) * 3);
+  margin: var(--size-16) auto;
+  padding-block: var(--size-12);
+  background-color: color-mix(in srgb, var(--green-400), transparent 70%);
+  border-radius: var(--size-24);
+}
+
+/* rate-score word */
+.rate-score p {
+  font-size: var(--fz-xs);
+  color: var(--green-500);
+  font-weight: var(--fw-semibold);
+}
+
+/* based on total SKS */
+.card-main-ipk > p:last-of-type {
+  font-size: var(--fz-sm);
+  color: var(--light-text-tertiary);
+  /* background-color: aqua; */
+}
+
+/* 3 card */
+
+.total-sks,
+.ipk-tertinggi,
+.semester-terbaik {
+  position: relative;
+  width: 100%;
+  margin-block: var(--size-16);
+  color: #fff;
+  padding: var(--size-20) var(--size-16);
+  transition: box-shadow 0.3s ease;
+}
+
+.total-sks::before,
+.ipk-tertinggi::before,
+.semester-terbaik::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  transition: box-shadow 0.3s ease;
+}
+.title-card {
+  display: flex;
+  align-items: center;
+}
+
+.title-card p {
+  font-size: var(--fz-base);
+  font-weight: var(--fw-medium);
+}
+
+.card-detail > span {
+  display: block;
+  font-size: var(--fz-h6);
+  margin-top: var(--size-16);
+  font-weight: var(--fw-bold);
+}
+
+/* Bar-Chart IPK */
+.ipk-chart {
+  /* margin-top: var(--size-16); */
+  padding: 1.5rem;
+}
+
+.ipk-chart canvas {
+  width: 100% !important;
+  max-height: 300px;
+}
+
+
+/* header detail riwayat */
+.detail-riwayat-studi h5 {
+  color: var(--light-text-secondary);
+}
+/* detail riwayat */
+.detail-riwayat-studi p {
+  font-size: var(--fz-base);
+  color: var(--light-text-tertiary);
+}
