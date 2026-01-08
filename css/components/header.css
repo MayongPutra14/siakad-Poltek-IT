@@ -50,7 +50,7 @@
 }
 
 /* header content desktop version */
-@media (min-width: 48rem) {
+@media (min-width: 70rem) {
   .header {
     justify-content: flex-end;
   }

@@ -22,7 +22,7 @@
 }
 
 /* SIAKAD Style in mobile */
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 70rem) {
   .dashboard-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
@@ -50,18 +50,13 @@ section.dashboard-content {
 @media screen and (min-width: 48rem) {
   section .student-profile {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "card-indentity announcement-container announcement-container";
-    gap: var(--size-12);
-  }
-
-  .student-profile .announcement-container {
-    grid-area: announcement-container;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
   }
 
   section .statistic-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     gap: var(--size-12);
   }
 }
@@ -81,18 +76,15 @@ section.biodata-mahasiswa {
   }
 }
 
-/* Menu ipk on mobile */
+/* Menu prestasi kumulatif on mobile */
 .menu-ipk {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
 }
 /* menu prestasi kumulatif on desktop */
-@media screen and (min-width: 48rem) {
-  .ipk-container .container-detail {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--size-32);
-  }
+.ipk-container .container-detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: var(--size-16);
 }
-

@@ -130,7 +130,7 @@
 }
 
 /* Sidebar on mobile */
-@media (max-width: 48rem) {
+@media (max-width: 70rem) {
   .sidebar {
     position: fixed;
     top: 0;

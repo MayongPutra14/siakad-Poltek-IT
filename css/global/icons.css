@@ -111,3 +111,12 @@
   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
   margin-right: var(--size-8);
 }
+
+.material-symbols-rounded.maintenance-icon {
+  font-size: var(--fz-h1);
+  padding: var(--size-16);
+  color: red;
+  background-color: var(--light-bg-secondary);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+}

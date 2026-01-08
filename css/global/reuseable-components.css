@@ -85,7 +85,8 @@
 
 /* Header: Biodata, Kartu Rencana Studi, Kartu Hasil Studi, Indeks Prestasi Kumulatif */
 .krs-container,
-.khs-container {
+.khs-container,
+.maintenance-container {
   background-color: var(--light-bg-secondary);
   border: 1px solid var(--light-border);
   border-radius: var(--size-8);

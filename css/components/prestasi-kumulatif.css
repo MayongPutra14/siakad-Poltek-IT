@@ -21,7 +21,6 @@
 .ipk-chart,
 .detail-riwayat-studi {
   border: 1px solid var(--light-border);
-  
 }
 
 /* space-container */
@@ -101,7 +100,6 @@
 .card-main-ipk > p:last-of-type {
   font-size: var(--fz-sm);
   color: var(--light-text-tertiary);
-  /* background-color: aqua; */
 }
 
 /* 3 card */
@@ -146,15 +144,18 @@
 
 /* Bar-Chart IPK */
 .ipk-chart {
-  /* margin-top: var(--size-16); */
   padding: 1.5rem;
+}
+
+.ipk-chart h5 {
+  color: var(--light-text-secondary);
+  margin-bottom: var(--size-20);
 }
 
 .ipk-chart canvas {
   width: 100% !important;
   max-height: 300px;
 }
-
 
 /* header detail riwayat */
 .detail-riwayat-studi h5 {

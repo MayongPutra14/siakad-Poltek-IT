@@ -108,7 +108,7 @@
 }
 
 /* biodata card: data in the contianer in desktop view */
-@media (min-width: 48rem) {
+@media (min-width: 70rem) {
   section .biodata-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
