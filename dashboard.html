@@ -44,7 +44,7 @@
           <ul class="menu menu-akademik">
             <!-- dasboard -->
             <li>
-              <a class="selected" href="#"
+              <a class="selected" data-tab-target = "#dashboard" 
                 ><span class="material-symbols-rounded sidebar-icn"
                   >dashboard</span
                 >Dashboard</a
@@ -52,14 +52,14 @@
             </li>
             <!-- profile -->
             <li>
-              <a href="#">
+              <a data-tab-target = "#biodata" >
                 <span class="material-symbols-rounded sidebar-icn">person</span
                 >Biodata</a
               >
             </li>
             <!-- rencana studi -->
             <li>
-              <a href="#"
+              <a data-tab-target = "#krs" 
                 ><span class="material-symbols-rounded sidebar-icn"
                   >calendar_today</span
                 >Rencana Studi</a
@@ -67,7 +67,7 @@
             </li>
             <!-- hasil studi -->
             <li>
-              <a href="#"
+              <a data-tab-target = "#khs" 
                 ><span class="material-symbols-rounded sidebar-icn"
                   >fact_check</span
                 >Hasil Studi</a
@@ -75,7 +75,7 @@
             </li>
             <!-- IPK KUMULATIF -->
             <li>
-              <a href="#"
+              <a data-tab-target = "#ipk" 
                 ><span class="material-symbols-rounded sidebar-icn"
                   >workspace_premium</span
                 >Prestasi Kumulatif</a
@@ -85,7 +85,7 @@
           <ul class="menu menu-setting">
             <!-- setting -->
             <li>
-              <a href="#"
+              <a data-tab-target = "#setting" 
                 ><span class="material-symbols-rounded sidebar-icn"
                   >settings</span
                 >Setting</a
@@ -93,7 +93,7 @@
             </li>
             <!-- logout -->
             <li>
-              <a href="#" class="logout"
+              <a class="logout"  
                 ><span class="material-symbols-rounded sidebar-icn logout"
                   >logout</span
                 >Logout</a
@@ -106,7 +106,7 @@
       <!-- MAIN CONTENT -->
       <main id="main-content" class="main-content">
         <!-- MENU DASHBOARD -->
-        <section id="dashboard" class="dashboard-content" style="display: none;" >
+        <section id="dashboard" class="dashboard-content clicked" data-tab-content>
           <!-- CARD PROFILE & ANNOUNCEMENT -->
           <div class="student-profile">
             <!-- Profile Section -->
@@ -221,7 +221,7 @@
         </section>
 
         <!-- MENU BIODATA MAHASISWA -->
-        <section id="biodata" class="biodata-mahasiswa" style="display: none">
+        <section id="biodata" class="biodata-mahasiswa" data-tab-content>
           <!-- COL-1 ROW-1 CARD INDENTITY -->
           <article class="card-indentity">
             <div class="image-container">
@@ -363,7 +363,7 @@
         </section>
 
         <!-- MENU KRS-->
-        <section id="krs" class="menu-krs" style="display: none">
+        <section id="krs" class="menu-krs" data-tab-content>
           <div class="krs-container">
             <!-- TITLE KRS COL-1 -->
             <article class="krs-header">
@@ -515,7 +515,7 @@
         </section>
 
         <!-- MENU KHS -->
-        <section id="khs" class="menu-khs" style="display: none">
+        <section id="khs" class="menu-khs" data-tab-content>
           <div class="khs-container">
             <!-- TITLE KHS COL-1 -->
             <article class="khs-header">
@@ -646,7 +646,7 @@
         </section>
 
         <!-- MENU IPK KUMULATIF -->
-        <section id="ipk" class="menu-ipk">
+        <section id="ipk" class="menu-ipk" data-tab-content>
           <div class="ipk-container">
             <!-- TITLE IPK COL-1 -->
             <article class="ipk-header">
@@ -781,7 +781,7 @@
         </section>
 
         <!-- MENU SETTING & CHANGE PASSWORD -->
-        <secttion id="setting" class="maintenance" style="display: none;">
+        <secttion id="setting" class="maintenance" data-tab-content>
           <div class="maintenance-container">
             <span class="material-symbols-rounded maintenance-icon"
               >warning</span

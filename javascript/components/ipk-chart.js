@@ -1,6 +1,13 @@
 const ipkData = {
-  semesters: ["Semester 1", "Semester 2", "Semester 3", "Semester 4", "Semester 5", "Semester 6"],
-  values: [3.2, 3.35, 3.80, 3.62, 3.50, 3.60],
+  semesters: [
+    "Semester 1",
+    "Semester 2",
+    "Semester 3",
+    "Semester 4",
+    "Semester 5",
+    "Semester 6",
+  ],
+  values: [3.2, 3.35, 3.8, 3.62, 3.5, 3.6],
 };
 
 const ctx = document.getElementById("ipkChart").getContext("2d");

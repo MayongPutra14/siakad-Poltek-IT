@@ -1,1 +1,1 @@
-import './components/password.js';
+import "./components/password.js";

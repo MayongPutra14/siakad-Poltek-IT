@@ -4,6 +4,14 @@
   border-right: 1px solid var(--gray-12);
 }
 
+/* data-tab-content: appear when selected */
+[data-tab-content] {
+  display: none !important;
+}
+.clicked[data-tab-content] {
+  display: grid !important;
+}
+
 /* Sidebar Logo */
 .sidebar-header {
   position: relative;

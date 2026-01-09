@@ -33,7 +33,7 @@
 }
 
 /* dashboard & biodata<space>: space between profile and content in right */
-.dashboard-content .student-profile,
+section .student-profile,
 .biodata-mahasiswa {
   display: grid;
   gap: var(--size-12);

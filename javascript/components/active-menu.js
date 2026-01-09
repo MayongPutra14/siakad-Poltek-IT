@@ -1,7 +1,5 @@
 const menuList = document.querySelectorAll(".sidebar-menu ul li a");
 
-
-
 function menuActive(event) {
   // remove class .selected from all links
   menuList.forEach((menu) => {
@@ -15,5 +13,3 @@ function menuActive(event) {
 menuList.forEach((menu) => {
   menu.addEventListener("click", menuActive);
 });
-
-
