@@ -46,9 +46,13 @@
   padding-block: var(--size-16);
 }
 
+.announcement-article h6 {
+    color: var(--text-primary);
+}
+
 .announcement-article p {
   margin-block: var(--size-8);
-  color: var(--light-text-tertiary);
+  color: var(--text-tertiary);
 }
 
 /* Statistik Card */

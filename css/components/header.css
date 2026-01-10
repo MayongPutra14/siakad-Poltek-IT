@@ -3,29 +3,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--light-bg-secondary);
-  border-bottom: 1px solid var(--gray-12);
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
   box-shadow: var(--shadow-xs);
 }
 
+.profile-header {
+  display: flex;
+}
+
 /* header content mobile version */
-.header .name {
+.header .student-name {
   display: none;
 }
 
-/* Student Name */
-.name h3 {
+/* Student student-name */
+.student-name h3 {
   font-family: var(--font-poppins);
   font-size: var(--fz-h5);
   font-weight: var(--fw-medium);
-  color: var(--light-text-primary);
+  color: var(--text-primary);
 }
 
 /* Role */
-.name span {
+.student-name span {
   font-family: var(--font-poppins);
   font-weight: var(--fw-regular);
-  color: var(--light-text-tertiary);
+  color: var(--text-tertiary);
 }
 
 /* photo Profile */
@@ -35,33 +39,51 @@
   border-radius: 50%;
   box-shadow: var(--shadow-sm);
 }
-
-.header .menu-toggle {
-  cursor: pointer;
-  font-size: var(--size-40);
-  box-shadow: var(--shadow-xs);
-  padding: var(--size-4);
-  border-radius: var(--size-8);
-  transition: background-color 0.3s ease;
+/* container of student profile and theme toggle */
+.theme-profile-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(var(--size-12), 1vw, var(--size-20));
+  width: clamp(25%, 2vw, 28%);
 }
 
-.header .menu-toggle:hover {
-  background-color: var(--gray-11);
+/* theme icon: moon and sun */
+.theme-container span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* deafault condition sun icon is inactive */
+.theme-container .sun-icon {
+  display: none;
+}
+
+/* deafault condition moon-icon is active */
+.theme-active {
+  display: block;
 }
 
 /* header content desktop version */
 @media (min-width: 70rem) {
   .header {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
-  .header .menu-toggle {
+  .header .menu-icn {
     display: none;
   }
 
-  .header .name {
+  .header .student-name {
     display: block;
     margin-right: var(--size-16);
     text-align: right;
     cursor: default;
+  }
+
+  .theme-profile-container{
+     width: 100%;
   }
 }

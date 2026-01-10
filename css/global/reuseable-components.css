@@ -13,8 +13,8 @@
 .card-indentity,
 .announcement-container,
 .detail-biodata {
-  background-color: var(--light-bg-secondary);
-  border: 1px solid var(--light-border);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
   border-radius: var(--size-8);
   box-shadow: var(--shadow-md);
   overflow: hidden;
@@ -25,6 +25,7 @@
   text-align: center;
   width: 100%;
   padding: var(--size-40) var(--size-16);
+  background-color: var(--bg-secondary);
 }
 /* style for card-profile(biodata) || krs & khs */
 .identity-detail {
@@ -36,12 +37,12 @@
 
 .identity-detail h5 {
   font-size: var(--fz-h4);
-  color: var(--light-text-primary);
+  color: var(--text-primary);
   font-weight: var(--fw-bold);
 }
 
 .identity-detail .id-primary {
-  color: var(--light-text-secondary);
+  color: var(--text-secondary);
   font-weight: var(--fw-medium);
 }
 
@@ -50,7 +51,7 @@
   margin: 0 auto;
   padding-block: var(--size-8);
   margin-top: var(--size-16);
-  background-color: color-mix(in srgb, var(--green-400), transparent 50%);
+  background-color: var(--green-300);
   border-radius: var(--size-40);
   color: var(--emerald-900);
   font-weight: var(--fw-bold);
@@ -87,8 +88,8 @@
 .krs-container,
 .khs-container,
 .maintenance-container {
-  background-color: var(--light-bg-secondary);
-  border: 1px solid var(--light-border);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
   border-radius: var(--size-8);
   box-shadow: var(--shadow-md);
   overflow: hidden;
@@ -119,13 +120,13 @@
 .menu-krs .student-identity p,
 .menu-khs .student-identity p {
   font-weight: var(--fw-semibold);
-  color: var(--light-text-primary);
+  color: var(--text-primary);
 }
 
 .menu-krs .student-identity span,
 .menu-khs .student-identity span {
   font-weight: var(--fw-medium);
-  color: var(--light-text-tertiary);
+  color: var(--text-tertiary);
 }
 
 .tabel-relative {
@@ -176,12 +177,17 @@ td {
 
 /* odd line lighter */
 tbody tr:nth-child(odd) {
-  background-color: #ffffff;
+  background-color: var(--bg-table-primary);
 }
 
 /* even line - darker */
 tbody tr:nth-child(even) {
-  background-color: #f3f4f6;
+  background-color: var(--bg-table-secoandary);
+}
+
+tbody td {
+  padding: 16px;
+  color: var(--text-primary);
 }
 
 /* view in desktop: indentity in krs & khs */

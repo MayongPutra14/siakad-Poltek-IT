@@ -15,12 +15,12 @@
 
 .status-detail .label {
   font-weight: var(--fw-semibold);
-  color: var(--light-text-primary);
+  color: var(--text-primary);
 }
 
 .status-detail .value {
   font-weight: var(--fw-medium);
-  color: var(--light-text-secondary);
+  color: var(--text-secondary);
 }
 
 @media (min-width: 48rem) {

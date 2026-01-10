@@ -9,10 +9,11 @@
 .maintenance-container h3 {
   font-weight: var(--fw-bold);
   margin-block: var(--size-20);
+  color: var(--text-primary);
 }
 
 .maintenance-container p {
-  color: var(--light-text-secondary);
+  color: var(--text-secondary);
   font-weight: var(--fw-medium);
 }
 

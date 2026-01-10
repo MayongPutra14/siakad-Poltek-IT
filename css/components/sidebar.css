@@ -1,7 +1,7 @@
 /* sidebar container */
 .sidebar {
-  background-color: var(--light-bg-secondary);
-  border-right: 1px solid var(--gray-12);
+  background-color: var(--bg-secondary);
+  border-right: 1px solid var(--border);
 }
 
 /* data-tab-content: appear when selected */
@@ -29,7 +29,7 @@
   content: "";
   width: 90%;
   height: 2px;
-  background-color: var(--gray-12);
+  background-color: var(--border);
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -70,11 +70,8 @@
 /* X close button on the right */
 .sidebar-header .close-btn {
   position: absolute;
-  top: 30%;
+  top: 80%;
   right: -2.7rem;
-  font-size: var(--size-40);
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 /* Sidebar menu */
@@ -107,7 +104,7 @@
   width: 100%;
   padding: var(--size-12) var(--size-16);
   margin: var(--size-8) var(--size-12);
-  color: var(--light-text-tertiary);
+  color: var(--text-tertiary);
   border-radius: var(--size-12);
   font-weight: var(--fw-medium);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -115,7 +112,7 @@
 }
 
 .sidebar-menu ul li a:hover {
-  background-color: var(--light-bg-hover);
+  background-color: var(--bg-hover);
 }
 
 .sidebar-menu ul li a:active {

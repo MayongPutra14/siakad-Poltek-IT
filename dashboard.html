@@ -17,14 +17,32 @@
     <div class="dashboard-container">
       <!-- NAME, ROLE, AND PICTURE, POSISITION TOP RIGHT -->
       <header id="header" class="header">
+        <!-- hamburger menu -->
         <div class="menu-icn">
           <span class="material-symbols-rounded menu-toggle">menu</span>
         </div>
-        <div class="name">
-          <h3>Gilang Mayong</h3>
-          <span>Mahasiswa</span>
+        <div class="theme-profile-container">
+          <!-- theme toggle -->
+          <div class="theme-container" aria-label="Toggle Theme">
+            <span class="material-symbols-rounded moon-icon theme-toggle"
+              >dark_mode</span
+            >
+            <span class="material-symbols-rounded sun-icon theme-toggle"
+              >light_mode</span
+            >
+          </div>
+          <!-- student profile -->
+          <div class="profile-header">
+            <div class="student-name">
+              <h3>Gilang Mayong</h3>
+              <span>Mahasiswa</span>
+            </div>
+            <img
+              src="./assets/images/github Profile.jpg"
+              alt="Profile Picture"
+            />
+          </div>
         </div>
-        <img src="./assets/images/github Profile.jpg" alt="Profile Picture" />
       </header>
 
       <!-- SIDEBAR -->
@@ -44,7 +62,7 @@
           <ul class="menu menu-akademik">
             <!-- dasboard -->
             <li>
-              <a class="selected" data-tab-target = "#dashboard" 
+              <a class="selected" data-tab-target="#dashboard"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >dashboard</span
                 >Dashboard</a
@@ -52,14 +70,14 @@
             </li>
             <!-- profile -->
             <li>
-              <a data-tab-target = "#biodata" >
+              <a data-tab-target="#biodata">
                 <span class="material-symbols-rounded sidebar-icn">person</span
                 >Biodata</a
               >
             </li>
             <!-- rencana studi -->
             <li>
-              <a data-tab-target = "#krs" 
+              <a data-tab-target="#krs"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >calendar_today</span
                 >Rencana Studi</a
@@ -67,7 +85,7 @@
             </li>
             <!-- hasil studi -->
             <li>
-              <a data-tab-target = "#khs" 
+              <a data-tab-target="#khs"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >fact_check</span
                 >Hasil Studi</a
@@ -75,7 +93,7 @@
             </li>
             <!-- IPK KUMULATIF -->
             <li>
-              <a data-tab-target = "#ipk" 
+              <a data-tab-target="#ipk"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >workspace_premium</span
                 >Prestasi Kumulatif</a
@@ -85,7 +103,7 @@
           <ul class="menu menu-setting">
             <!-- setting -->
             <li>
-              <a data-tab-target = "#setting" 
+              <a data-tab-target="#setting"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >settings</span
                 >Setting</a
@@ -93,7 +111,7 @@
             </li>
             <!-- logout -->
             <li>
-              <a class="logout"  
+              <a class="logout"
                 ><span class="material-symbols-rounded sidebar-icn logout"
                   >logout</span
                 >Logout</a
@@ -106,7 +124,11 @@
       <!-- MAIN CONTENT -->
       <main id="main-content" class="main-content">
         <!-- MENU DASHBOARD -->
-        <section id="dashboard" class="dashboard-content clicked" data-tab-content>
+        <section
+          id="dashboard"
+          class="dashboard-content clicked"
+          data-tab-content
+        >
           <!-- CARD PROFILE & ANNOUNCEMENT -->
           <div class="student-profile">
             <!-- Profile Section -->

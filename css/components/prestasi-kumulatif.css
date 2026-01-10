@@ -20,7 +20,7 @@
 .card-main-ipk,
 .ipk-chart,
 .detail-riwayat-studi {
-  border: 1px solid var(--light-border);
+  border: 1px solid var(--border);
 }
 
 /* space-container */
@@ -41,8 +41,8 @@
   border-top: var(--size-12) solid transparent;
   border-radius: var(--size-8);
   background-image: linear-gradient(
-      var(--light-bg-secondary),
-      var(--light-bg-secondary)
+      var(--bg-secondary),
+      var(--bg-secondary)
     ),
     linear-gradient(to right, var(--green-400), var(--teal-500));
   box-shadow: var(--shadow-md);
@@ -52,7 +52,7 @@
 
 /* Curren IPK */
 .card-main-ipk h5 {
-  color: var(--light-text-secondary);
+  color: var(--text-secondary);
   margin-block: var(--size-12);
 }
 
@@ -74,7 +74,7 @@
 .card-main-ipk .ipk-value::after {
   content: "/ 4.00";
   font-size: var(--fz-h5);
-  color: var(--light-text-tertiary);
+  color: var(--text-tertiary);
 }
 
 /* rate-socre container */
@@ -99,7 +99,7 @@
 /* based on total SKS */
 .card-main-ipk > p:last-of-type {
   font-size: var(--fz-sm);
-  color: var(--light-text-tertiary);
+  color: var(--text-tertiary);
 }
 
 /* 3 card */
@@ -148,7 +148,7 @@
 }
 
 .ipk-chart h5 {
-  color: var(--light-text-secondary);
+  color: var(--text-secondary);
   margin-bottom: var(--size-20);
 }
 
@@ -159,10 +159,10 @@
 
 /* header detail riwayat */
 .detail-riwayat-studi h5 {
-  color: var(--light-text-secondary);
+  color: var(--text-secondary);
 }
 /* detail riwayat */
 .detail-riwayat-studi p {
   font-size: var(--fz-base);
-  color: var(--light-text-tertiary);
+  color: var(--text-tertiary);
 }

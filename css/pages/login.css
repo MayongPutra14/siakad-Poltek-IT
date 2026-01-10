@@ -124,6 +124,10 @@ header {
   caret-color: var(--green-500);
 }
 
+.nim, .password {
+  position: relative;
+}
+
 /* Show/Hide Password eye icon */
 .show-hide-password {
   position: absolute;
@@ -145,9 +149,6 @@ header {
   display: block;
 }
 
-.nim, .password {
-  position: relative;
-}
 /* Icon person, lock, and eyes */
 .nim span, .password span{
   width: var(--size-24);
