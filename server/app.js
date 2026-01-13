@@ -41,9 +41,6 @@ const authRoutes = require("./routes/auth.routes.js");
 const mahasiswaRoutes = require("./routes/mahasiswa.routes.js");
 
 
-console.log("Auth Routes:", authRoutes);
-console.log("Mahasiswa Routes:", mahasiswaRoutes);
-
 app.use("/auth", authRoutes);
 app.use("/mahasiswa", mahasiswaRoutes);
 
