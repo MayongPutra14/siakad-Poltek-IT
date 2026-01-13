@@ -1,5 +1,0 @@
-# Dependencies (Direktori tempat library/package yang diinstal)
-/node_modules
-
-# Environment Variables (File berisi konfigurasi sensitif)
-.env
