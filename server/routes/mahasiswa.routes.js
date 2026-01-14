@@ -1,13 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const mahasiswaController = require('../controllers/mahasiswa.controller')
 const { isAuthenticatedMahasiswa } = require("../middlewares/auth.middleware");
 
-// dummy route
-router.get("/me", isAuthenticatedMahasiswa, (req, res) => {
-  res.json({
-    message: "Mahasiswa route ready",
-    indentity: req.session.user
-  });
-});
+
+router.get("/me", isAuthenticatedMahasiswa, mahasiswaController.getMyProfile);
 
 module.exports = router;
