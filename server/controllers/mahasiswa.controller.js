@@ -24,6 +24,34 @@ async function getMyProfile(req, res) {
   }
 }
 
+// VIEW KRS ACTIVE
+const viewKrsAktif = async(req, res) => {
+  try {
+    const idMahasiswa = req.session.user?.id_ref; // take id from session login
+
+    if(!idMahasiswa) {
+      return res.status(401).json({
+        status: 'Fail',
+        message: 'Sesi tidak valid atau id_ref tidak ditemukan'
+      })
+    }
+    const krs = await mahasiswaService.getKrsActive(idMahasiswa);
+    res.status(200).json({
+      status: 'Success',
+      data: krs
+    })
+
+
+  } catch (error) {
+    console.error("Detail Error:", error);
+    return res.status(500).json({
+      status: 'Error',
+      message: "Terjadi kesalahan server",
+    });
+  }
+}
+
 module.exports = {
-    getMyProfile
+    getMyProfile,
+    viewKrsAktif
 }
