@@ -1,9 +1,13 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const { isAuthenticatedMahasiswa } = require("../middlewares/auth.middleware");
 
 // dummy route
-router.get('/me', (req, res) => {
-  res.json({ message: 'Mahasiswa route ready' });
+router.get("/me", isAuthenticatedMahasiswa, (req, res) => {
+  res.json({
+    message: "Mahasiswa route ready",
+    indentity: req.session.user
+  });
 });
 
 module.exports = router;

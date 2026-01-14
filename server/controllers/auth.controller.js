@@ -17,12 +17,19 @@ async function loginMahasiswa(req, res) {
 
     if (!isMatch) {
       return res.status(401).json({
-        message: 'Password salah'
+        message: 'NIM atau Password salah'
       });
     }
 
+    // Save session before response
+    req.session.user = {
+      id_ref: akun.id_ref,
+      role: akun.role
+    }
+
     return res.status(200).json({
-      message: 'Login berhasil'
+      message: 'Login berhasil',
+      user: req.session.user
     });
 
   } catch (error) {

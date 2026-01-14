@@ -1,3 +1,4 @@
+require('dotenv').config
 const express = require("express");
 const session = require("express-session");
 
@@ -20,8 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   session({
-    name: "siapit.sid",
-    secret: "siapit-secret-key",
+    name: process.env.SESSION_NAME,
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
