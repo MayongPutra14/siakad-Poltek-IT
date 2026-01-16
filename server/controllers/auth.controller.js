@@ -1,6 +1,7 @@
-const bcrypt = require('bcrypt');
-const authService = require('../services/auth.service');
+const bcrypt = require("bcrypt");
+const authService = require("../services/auth.service");
 
+// LOGIN STUDENT
 async function loginMahasiswa(req, res) {
   try {
     const { nim, password } = req.body;
@@ -9,7 +10,7 @@ async function loginMahasiswa(req, res) {
 
     if (!akun) {
       return res.status(401).json({
-        message: 'Akun tidak ditemukan atau bukan mahasiswa'
+        message: "Akun tidak ditemukan atau bukan mahasiswa",
       });
     }
 
@@ -17,29 +18,52 @@ async function loginMahasiswa(req, res) {
 
     if (!isMatch) {
       return res.status(401).json({
-        message: 'NIM atau Password salah'
+        message: "NIM atau Password salah",
       });
     }
 
     // Save session before response
     req.session.user = {
       id_ref: akun.id_ref,
-      role: akun.role
-    }
+      role: akun.role,
+    };
 
     return res.status(200).json({
-      message: 'Login berhasil',
-      user: req.session.user
+      message: "Login berhasil",
+      user: req.session.user,
     });
-
   } catch (error) {
     console.error(error);
     return res.status(500).json({
-      message: 'Terjadi kesalahan server'
+      message: "Terjadi kesalahan server",
     });
   }
 }
 
+// LOGOUT STUDENT
+const logoutMahasiswa = (req, res) => {
+  // 1. Destroy session in server side
+  req.session.destroy((error) => {
+    if (error) {
+      console.error(`Gagal menghancurkan session: ${error}`);
+      return res.status(500).json({
+        succes: "FAILED",
+        message: "Gagal logout, silahkan coba lagi.",
+      });
+    }
+
+    // 2. Clear cookie session in client side
+    res.clearCookie("connect.sid"); // connect.sid default name from express-session
+
+    // 3. send response success
+    return res.status(200).json({
+      succes: "SUCCESS",
+      message: "Berhasil logout, Sampai jumpa kembali",
+    });
+  });
+};
+
 module.exports = {
-  loginMahasiswa
+  loginMahasiswa,
+  logoutMahasiswa,
 };

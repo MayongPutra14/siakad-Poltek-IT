@@ -1,5 +1,6 @@
 const mahasiswaService = require("../services/mahasiswa.service");
 
+// 1. get profile
 async function getMyProfile(req, res) {
   try {
     // get id from session, not url
@@ -17,31 +18,42 @@ async function getMyProfile(req, res) {
       data: profile,
     });
   } catch (error) {
-    console.error(error);
+    console.error(`Detail Error Profile: ${error}`);
     return res.status(500).json({
       message: "Terjadi kesalahan server",
     });
   }
 }
 
-// VIEW KRS ACTIVE
-const viewKrsAktif = async (req, res) => {
+// 2. Get All KRS & KRS ACTIVE
+const getAllKrs = async (req, res) => {
   try {
     const idMahasiswa = req.session.user?.id_ref; // take id from session login
 
     if (!idMahasiswa) {
       return res.status(401).json({
         status: "Fail",
-        message: "Sesi tidak valid atau id_ref tidak ditemukan",
+        message: "Sesi tidak valid",
       });
     }
-    const krs = await mahasiswaService.getKrsActive(idMahasiswa);
+    // GET KRS HISTORY
+    // const krs = await mahasiswaService.getKrsActive(idMahasiswa);
+    const krs = await mahasiswaService.getAllKrsHistory(idMahasiswa);
+
+    const krsAktif = krs.filter((item) => item.status_semester === 1);
+    const riwayatKrs = krs.filter((item) => item.status_semester === 0);
+
     res.status(200).json({
       status: "Success",
-      data: krs,
+      message: "Data KRS berhasil diambil",
+      data: {
+        total_matakuliah: krs.length,
+        aktif: krsAktif,
+        riwayat: riwayatKrs,
+      },
     });
   } catch (error) {
-    console.error("Detail Error:", error);
+    console.error("Detail Error KRS:", error);
     return res.status(500).json({
       status: "Error",
       message: "Terjadi kesalahan server",
@@ -49,31 +61,33 @@ const viewKrsAktif = async (req, res) => {
   }
 };
 
-// VIEW ONE KHS
-const viewKhs = async (req, res) => {
+// 3. GET ALL KHS & LATTEST KHS
+const getAllKhs = async (req, res) => {
   try {
     const idMahasiswa = req.session.user.id_ref;
-    const idSemester = req.query.semester; // get ?semester = x
+    // const idSemester = req.query.semester; // get ?semester = x
 
-    if (!idSemester) {
-      return res.status(400).json({
+    if (!idMahasiswa) {
+      return res.status(401).json({
         status: "Failed",
-        message: "Silahkan pilih semester telebih dahulu",
+        message: "Sesi tidak valid",
       });
     }
 
-    const khs = await mahasiswaService.getKhsBySemester(
-      idMahasiswa,
-      idSemester
-    );
+    const khs = await mahasiswaService.getAllKhsHistory(idMahasiswa);
+
+    // const khsAktif = khs.filter(item => item.status_semester)
 
     res.status(200).json({
-      status: "Get KHS Successfully",
-      semester_id: idSemester,
+      status: "Success",
+      message: "Data KHS berhasil diambil",
+      // semester_id: idSemester,
+      // data: khs.daftar_nilai,
       data: khs,
+      // sumary: khs.summary,
     });
   } catch (error) {
-    console.error(`Detail Error: ${error}`);
+    console.error(`Detail Error KHS: ${error}`);
     res.status(500).json({
       status: "Error",
       message: "Terjadi Kesalahan Server",
@@ -81,29 +95,77 @@ const viewKhs = async (req, res) => {
   }
 };
 
-// VIEW ALL KHS
-const getKhsHistory = async (req, res) => {
+// 4. GET Dashboard Summary
+const getDashboardSummary = async (req, res) => {
   try {
-    const idMahasiswa = req.session.user.id_ref;
-    const history = await mahasiswaService.getAllKhsHistory(idMahasiswa);
+    const idMahasiswa = req.session.user?.id_ref;
+    // 1. take profile and history pararel
+    const [profile, akademikHistory] = await Promise.all([
+      mahasiswaService.getMahasiswaProfile(idMahasiswa),
+      mahasiswaService.getAllKhsHistory(idMahasiswa),
+    ]);
 
     res.status(200).json({
       status: "Success",
-      message: "Seluruh riwayat KHS berhasil dimabil",
-      data: history,
+      data: {
+        nama: profile.nama,
+        nim: profile.nim,
+        ipk: akademikHistory.ipk,
+        sks_total: akademikHistory.total_sks,
+        status_akademik: profile.status,
+      },
     });
   } catch (error) {
-    console.error(`Detail Error Hisotry: ${error}`);
+    console.error(`Detail Error Dashboard: ${error}`);
     res.status(500).json({
-      status: "Error",
+      success: "False",
       message: "Terjadi kesalahan server",
     });
   }
 };
 
+
+/* GET KHS By Semester
+
+const viewKhsBySemester = async (req, res) => {
+  try {
+    const idMahasiswa = req.session.user.id_ref;
+    const idSemester = req.query.semester; // get ?semester = x
+
+    if (!idSemester) {
+      return res.status(401).json({
+        status: "Failed",
+        message: "Sesi tidak valid",
+      });
+    }
+
+    const khs = await mahasiswaService.getKhsBySemester(idMahasiswa, idSemester);
+
+    // const khsAktif = khs.filter(item => item.status_semester)
+
+    res.status(200).json({
+      status: "Success",
+      message: "Data KHS berhasil diambil",
+      semester_id: idSemester,
+      data: khs.daftar_nilai,
+      // data: khs,
+      sumary: khs.summary,
+    });
+  } catch (error) {
+    console.error(`Detail Error KHS: ${error}`);
+    res.status(500).json({
+      status: "Error",
+      message: "Terjadi Kesalahan Server",
+    });
+  }
+};
+*/
+
+
+
 module.exports = {
   getMyProfile,
-  viewKrsAktif,
-  viewKhs,
-  getKhsHistory,
+  getDashboardSummary,
+  getAllKrs,
+  getAllKhs,
 };

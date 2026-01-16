@@ -4,13 +4,12 @@ const mahasiswaController = require('../controllers/mahasiswa.controller')
 const { isAuthenticatedMahasiswa } = require("../middlewares/auth.middleware");
 
 
-router.get("/me", isAuthenticatedMahasiswa, mahasiswaController.getMyProfile);
+router.get("/profile", isAuthenticatedMahasiswa, mahasiswaController.getMyProfile);
 
-router.get('/krs', isAuthenticatedMahasiswa, mahasiswaController.viewKrsAktif);
+router.get('/dashboard',isAuthenticatedMahasiswa, mahasiswaController.getDashboardSummary)
 
-router.get('/khs', isAuthenticatedMahasiswa, mahasiswaController.viewKhs);
+router.get('/krs', isAuthenticatedMahasiswa, mahasiswaController.getAllKrs);
 
-router.get('/khs-history', isAuthenticatedMahasiswa, mahasiswaController.getKhsHistory);
-
+router.get('/khs', isAuthenticatedMahasiswa, mahasiswaController.getAllKhs);
 
 module.exports = router;
