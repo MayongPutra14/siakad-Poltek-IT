@@ -1,7 +1,11 @@
 const db = require("../config/db");
 
 // GET student profile
-async function getMahasiswaProfile(id_mahasiswa) {
+async function getMahasiswaProfile(idMahasiswa) {
+  if(!idMahasiswa) {
+    console.error(`Error: getMahasiswaProfile menerima ID Undifine`)
+    return null
+  }
   const query = `
         SELECT
             m.id_mahasiswa,
@@ -21,7 +25,13 @@ async function getMahasiswaProfile(id_mahasiswa) {
         WHERE m.id_mahasiswa = ?
     `;
 
-  const [rows] = await db.execute(query, [id_mahasiswa]);
+  // const query = `
+  //   SELECT m.* FROM mahasiswa m
+  //   JOIN program_studi p ON m.id_prodi = p.id_prodi
+  //   WHERE m.id_mahasiswa =  ?
+        // ini merupakan query saat debugging
+  // `
+  const [rows] = await db.execute(query, [idMahasiswa]);
   return rows[0];
 }
 

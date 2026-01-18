@@ -1,8 +1,21 @@
-require('dotenv').config
+require('dotenv').config()
 const express = require("express");
 const session = require("express-session");
-
+const cors = require('cors');
 const app = express();
+
+/**
+ * ======================
+ * CORS
+ * ======================
+ */
+
+app.use(cors({
+  origin: 'http://localhost:5501',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}))
 
 /**
  * ======================
@@ -27,7 +40,9 @@ app.use(
     saveUninitialized: false,
     cookie: {
       httpOnly: true,
+      secure: false,
       sameSite: "lax",
+      maxAge: 1000 * 60 * 60 * 24
     },
   })
 );

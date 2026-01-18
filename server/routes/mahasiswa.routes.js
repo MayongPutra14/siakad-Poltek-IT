@@ -4,9 +4,9 @@ const mahasiswaController = require('../controllers/mahasiswa.controller')
 const { isAuthenticatedMahasiswa } = require("../middlewares/auth.middleware");
 
 
-router.get("/profile", isAuthenticatedMahasiswa, mahasiswaController.getMyProfile);
-
 router.get('/dashboard',isAuthenticatedMahasiswa, mahasiswaController.getDashboardSummary)
+
+router.get("/profile", isAuthenticatedMahasiswa, mahasiswaController.getMyProfile);
 
 router.get('/krs', isAuthenticatedMahasiswa, mahasiswaController.getAllKrs);
 

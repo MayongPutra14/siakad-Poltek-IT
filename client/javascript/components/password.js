@@ -1,4 +1,4 @@
-const passwordInput = document.getElementById("password");
+const passwordInput = document.getElementById("password-input");
 const openIcon = document.querySelector(".visible");
 const closeIcon = document.querySelector(".unvisible");
 

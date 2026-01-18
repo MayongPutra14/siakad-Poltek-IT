@@ -1,9 +1,12 @@
+require('dotenv').config()
 const bcrypt = require("bcrypt");
 const authService = require("../services/auth.service");
 
 // LOGIN STUDENT
 async function loginMahasiswa(req, res) {
   try {
+    // Di dalam loginMahasiswa
+console.log("Isi Payload dari Frontend:", JSON.stringify(req.body, null, 2));
     const { nim, password } = req.body;
 
     const akun = await authService.findMahasiswaAccountByNim(nim);
@@ -27,6 +30,16 @@ async function loginMahasiswa(req, res) {
       id_ref: akun.id_ref,
       role: akun.role,
     };
+    
+    // // force to save the session before send teh response JSON
+    // req.session.save((error) => {
+    //   if(error) {
+    //     console.error(`Gagal menyimpan Session: ${error} `);
+    //     return res.status(500).json({
+    //       message: "Gagal memproses Session"
+    //     })
+    //   }
+    // })
 
     return res.status(200).json({
       message: "Login berhasil",
@@ -53,7 +66,7 @@ const logoutMahasiswa = (req, res) => {
     }
 
     // 2. Clear cookie session in client side
-    res.clearCookie("connect.sid"); // connect.sid default name from express-session
+    res.clearCookie(process.env.SESSION_NAME);
 
     // 3. send response success
     return res.status(200).json({

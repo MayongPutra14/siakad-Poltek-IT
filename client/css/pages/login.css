@@ -1,14 +1,9 @@
-@import url('../global/boilerplate.css');
-@import url('../global/fonts.css');
-@import url('../global/icons.css');
-
-
 body {
-  background-color: var(--color-white);
+  background-color: var(--bg-primary);
 }
 
 header {
-  background-color: var(--color-background-white);
+  background-color: var(--bg-secondary);
   padding: var(--size-16) var(--size-24);
   font-family: var(--font-poppins);
   font-size: var(--font-poppins);
@@ -77,7 +72,7 @@ header {
   margin-top: var(--size-56);
   padding:var(--size-32) var(--size-24);
   border-radius: var(--size-12);
-  background-color: var(--color-white);
+  background-color: var(--bg-secondary);
   box-shadow: var(--shadow-lg);
 }
 
@@ -106,12 +101,12 @@ header {
   width: 100%;
   font-family: var(--font-poppins);
   font-size: 0.9rem;
-  background-color: var(--color-white);
+  background-color: var(--bg-secondary);
   padding: var(--size-16) var(--size-40);
   margin-bottom: var(--size-16);
   border-radius: var(--size-8);
   border: transparent;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .form-container input::placeholder {
@@ -133,7 +128,7 @@ header {
   position: absolute;
   width: var(--size-24);
   right: var(--size-24);
-  top: calc(var(--size-8) - 2px );
+  top: 0;
   cursor: pointer;
 }
 /* visible and unvisible eyes */
@@ -182,8 +177,8 @@ header {
 }
 
 .form-container button:hover {
-  background-color: var(--green-500);
-  box-shadow: 2px 2px 6px 2px var(--green-500);
+  background-color: var(--green-400);
+  box-shadow: 2px 2px 6px 2px var(--green-400);
 }
 
 .copyright {

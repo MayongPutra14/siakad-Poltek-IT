@@ -33,7 +33,7 @@ const getAllKrs = async (req, res) => {
     if (!idMahasiswa) {
       return res.status(401).json({
         status: "Fail",
-        message: "Sesi tidak valid",
+        message: "Sesi tidak ditemukan, silahkan login kembali",
       });
     }
     // GET KRS HISTORY
@@ -99,26 +99,41 @@ const getAllKhs = async (req, res) => {
 const getDashboardSummary = async (req, res) => {
   try {
     const idMahasiswa = req.session.user?.id_ref;
+
+    if(!idMahasiswa) {
+      return res.status(401).json({
+        status: "Error",
+        message: "Session tidak ditemukan, silahkan login kembali"
+      })
+    }
+
     // 1. take profile and history pararel
     const [profile, akademikHistory] = await Promise.all([
       mahasiswaService.getMahasiswaProfile(idMahasiswa),
       mahasiswaService.getAllKhsHistory(idMahasiswa),
     ]);
 
+    if(!profile) {
+      return res.status(404).json({
+        status: "Error",
+        message: "Data profile mahasiswa tidak ditemukan"
+      })
+    }
+
     res.status(200).json({
       status: "Success",
       data: {
         nama: profile.nama,
         nim: profile.nim,
-        ipk: akademikHistory.ipk,
-        sks_total: akademikHistory.total_sks,
+        ipk: akademikHistory?.ipk || 0,
+        sks_total: akademikHistory?.total_sks || 0,
         status_akademik: profile.status,
       },
     });
   } catch (error) {
     console.error(`Detail Error Dashboard: ${error}`);
     res.status(500).json({
-      success: "False",
+      status: "Error",
       message: "Terjadi kesalahan server",
     });
   }
