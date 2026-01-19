@@ -37,7 +37,6 @@ const getAllKrs = async (req, res) => {
       });
     }
     // GET KRS HISTORY
-    // const krs = await mahasiswaService.getKrsActive(idMahasiswa);
     const krs = await mahasiswaService.getAllKrsHistory(idMahasiswa);
 
     const krsAktif = krs.filter((item) => item.status_semester === 1);
@@ -76,15 +75,10 @@ const getAllKhs = async (req, res) => {
 
     const khs = await mahasiswaService.getAllKhsHistory(idMahasiswa);
 
-    // const khsAktif = khs.filter(item => item.status_semester)
-
     res.status(200).json({
       status: "Success",
       message: "Data KHS berhasil diambil",
-      // semester_id: idSemester,
-      // data: khs.daftar_nilai,
       data: khs,
-      // sumary: khs.summary,
     });
   } catch (error) {
     console.error(`Detail Error KHS: ${error}`);
@@ -126,9 +120,11 @@ const getDashboardSummary = async (req, res) => {
         nama: profile.nama,
         nim: profile.nim,
         ipk: akademikHistory?.ipk || 0,
+        prodi: profile.nama_prodi,
         sks_total: akademikHistory?.total_sks || 0,
         status_akademik: profile.status,
       },
+      data2: profile,
     });
   } catch (error) {
     console.error(`Detail Error Dashboard: ${error}`);
@@ -138,45 +134,6 @@ const getDashboardSummary = async (req, res) => {
     });
   }
 };
-
-
-/* GET KHS By Semester
-
-const viewKhsBySemester = async (req, res) => {
-  try {
-    const idMahasiswa = req.session.user.id_ref;
-    const idSemester = req.query.semester; // get ?semester = x
-
-    if (!idSemester) {
-      return res.status(401).json({
-        status: "Failed",
-        message: "Sesi tidak valid",
-      });
-    }
-
-    const khs = await mahasiswaService.getKhsBySemester(idMahasiswa, idSemester);
-
-    // const khsAktif = khs.filter(item => item.status_semester)
-
-    res.status(200).json({
-      status: "Success",
-      message: "Data KHS berhasil diambil",
-      semester_id: idSemester,
-      data: khs.daftar_nilai,
-      // data: khs,
-      sumary: khs.summary,
-    });
-  } catch (error) {
-    console.error(`Detail Error KHS: ${error}`);
-    res.status(500).json({
-      status: "Error",
-      message: "Terjadi Kesalahan Server",
-    });
-  }
-};
-*/
-
-
 
 module.exports = {
   getMyProfile,

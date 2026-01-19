@@ -13,11 +13,11 @@ logiForm.addEventListener("submit", async (event) => {
       headers: {
         "Content-Type": "application/json",
       },
-      credentials: 'include', // SAVE SESSION
-    //   CHANGE DATA TO STRING
+      credentials: "include", // SAVE SESSION
+      //   CHANGE DATA TO STRING
       body: JSON.stringify({
         nim: nim,
-        password: password
+        password: password,
       }),
     });
 
@@ -25,12 +25,12 @@ logiForm.addEventListener("submit", async (event) => {
 
     // 3. LOGIC AFTER RECIEVE THE ANSWER
     if (response.ok) {
-        alert('Login berhasil!');
-        window.location.href = '/client/dashboard.html'; // CHANGE PATH TO dashboard.html
-    }else {
-        alert(`Gagal: ${result.message}`)
+      alert("Login berhasil!");
+      window.location.href = "dashboard.html"; // CHANGE PATH TO dashboard.html
+    } else {
+      alert(`Gagal: ${result.message}`);
     }
   } catch (error) {
-    console.error(`Error koumnikasi ke server ${error}`)
+    console.error(`Error koumnikasi ke server ${error}`);
   }
 });

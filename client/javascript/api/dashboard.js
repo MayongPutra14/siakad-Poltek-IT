@@ -11,7 +11,7 @@ export const initDashboard = async () => {
     if (response.status === 401) {
       // IF SESSION FINISH OR INVALID
 
-      window.location.href = "/login.html";
+      window.location.href = "login.html";
       return;
     }
 
@@ -29,13 +29,15 @@ export const initDashboard = async () => {
 // function rendering data to user
 function renderDataToUI(data) {
   // RENDERING THE DATA
-  document.getElementById("student-name").textContent = dataMahasiswa.nama;
-  document.getElementById("student-nim").textContent = dataMahasiswa.nim;
+  document.getElementById("student-name").textContent = data.nama;
+  document.getElementById("student-nim").textContent = data.nim;
   document.getElementById("student-major").textContent =
-    dataMahasiswa.program_studi;
+    data.prodi;
   document.getElementById("stundent-status").textContent =
-    dataMahasiswa.status_akademik;
+    data.status_akademik;
 }
 
-// RUN FUNCTION
-initDashboard();
+// Memastikan script hanya berjalan saat HTML sudah siap sepenuhnya
+document.addEventListener("DOMContentLoaded", () => {
+    initDashboard();
+});

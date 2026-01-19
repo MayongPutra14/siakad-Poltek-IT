@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard Poltek IT</title>
+    <title>SIAP IT</title>
     <!-- MY CUSTOM CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     
@@ -69,7 +69,7 @@
           <ul class="menu menu-akademik">
             <!-- dasboard -->
             <li>
-              <a class="selected" data-tab-target="#dashboard"
+              <a href="#dahsboard" class="selected" data-tab-target="#dashboard"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >dashboard</span
                 >Dashboard</a
@@ -77,14 +77,14 @@
             </li>
             <!-- profile -->
             <li>
-              <a data-tab-target="#biodata">
+              <a href="biodata" data-tab-target="#biodata">
                 <span class="material-symbols-rounded sidebar-icn">person</span
                 >Biodata</a
               >
             </li>
             <!-- rencana studi -->
             <li>
-              <a data-tab-target="#krs"
+              <a href="krs" data-tab-target="#krs"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >calendar_today</span
                 >Rencana Studi</a
@@ -92,7 +92,7 @@
             </li>
             <!-- hasil studi -->
             <li>
-              <a data-tab-target="#khs"
+              <a href="khs" data-tab-target="#khs"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >fact_check</span
                 >Hasil Studi</a
@@ -100,7 +100,7 @@
             </li>
             <!-- IPK KUMULATIF -->
             <li>
-              <a data-tab-target="#ipk"
+              <a href="ipk" data-tab-target="#ipk"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >workspace_premium</span
                 >Prestasi Kumulatif</a
@@ -110,7 +110,7 @@
           <ul class="menu menu-setting">
             <!-- setting -->
             <li>
-              <a data-tab-target="#setting"
+              <a href="seeting" data-tab-target="#setting"
                 ><span class="material-symbols-rounded sidebar-icn"
                   >settings</span
                 >Setting</a
@@ -148,7 +148,7 @@
               </div>
               <div class="identity-detail">
                 <h5 id="student-name"> loading... </h5>
-                <span id="stundet-nim" class="id-primary"> loading... </span>
+                <span id="student-nim" class="id-primary"> loading... </span>
                 <span id="student-major" class="id-primary"> loading... </span>
                 <span id="stundent-status" class="status"> loading... </span>
               </div>
@@ -217,7 +217,7 @@
               </div>
             </article>
             <!-- STATISTICS SKS -->
-            <article class="card-statistics card--orange">
+            <article class="card-statistics card--orange orange">
               <div class="statistic-header">
                 <span
                   class="material-symbols-rounded statistic-icn"
@@ -826,7 +826,7 @@
     </div>
 
     <!-- MY CUSTOM JAVASCRIPT -->
-    <script src="./javascript/dashboard.js" type="module"></script>
+    <script src="./javascript/dashboard.js" type="module" defer></script>
     <!-- CDN chart>js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>

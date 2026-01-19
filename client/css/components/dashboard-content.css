@@ -70,9 +70,26 @@
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
   border-radius: inherit;
   transition: box-shadow 0.3s ease;
+}
+
+.card-statistics > * {
+   position: relative;
+  z-index: 1;
+}
+
+.card-statistics.active-subject p {
+  border-top: 2px solid #fff;
+  padding-top: var(--size-8);
+  margin-top: var(--size-4);
+}
+
+/* Total SKS */
+.card-statistics .progress-bar {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
 /* title statistic */
@@ -112,12 +129,7 @@
   border-top: 2px solid #fff;
 }
 
-/* Total SKS */
-.card-statistics .progress-bar {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-}
+
 /* general progress bar */
 progress {
   appearance: none;
@@ -147,10 +159,4 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   background-color: #ffe065;
   border-radius: var(--size-8);
-}
-
-.card-statistics.active-subject p {
-  border-top: 2px solid #fff;
-  padding-top: var(--size-8);
-  margin-top: var(--size-4);
 }
