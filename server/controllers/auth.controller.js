@@ -6,7 +6,6 @@ const authService = require("../services/auth.service");
 async function loginMahasiswa(req, res) {
   try {
     // Di dalam loginMahasiswa
-console.log("Isi Payload dari Frontend:", JSON.stringify(req.body, null, 2));
     const { nim, password } = req.body;
 
     const akun = await authService.findMahasiswaAccountByNim(nim);
@@ -30,16 +29,6 @@ console.log("Isi Payload dari Frontend:", JSON.stringify(req.body, null, 2));
       id_ref: akun.id_ref,
       role: akun.role,
     };
-    
-    // // force to save the session before send teh response JSON
-    // req.session.save((error) => {
-    //   if(error) {
-    //     console.error(`Gagal menyimpan Session: ${error} `);
-    //     return res.status(500).json({
-    //       message: "Gagal memproses Session"
-    //     })
-    //   }
-    // })
 
     return res.status(200).json({
       message: "Login berhasil",

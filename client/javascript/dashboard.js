@@ -7,3 +7,4 @@ import "./components/theme.js";
 
 // API
 import "./api/dashboard.js"
+import "./api/logout.js"

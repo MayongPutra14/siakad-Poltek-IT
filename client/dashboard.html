@@ -40,8 +40,8 @@
           </div>
           <!-- student profile -->
           <div class="profile-header">
-            <div class="student-name">
-              <h3>Gilang Mayong</h3>
+            <div class="student-name-container">
+              <h3 class="student-name">Gilang Mayong</h3>
               <span>Mahasiswa</span>
             </div>
             <img
@@ -118,7 +118,7 @@
             </li>
             <!-- logout -->
             <li>
-              <a class="logout"
+              <a href="#" id="btn-logout" class="logout"
                 ><span class="material-symbols-rounded sidebar-icn logout"
                   >logout</span
                 >Logout</a
@@ -147,10 +147,10 @@
                 />
               </div>
               <div class="identity-detail">
-                <h5 id="student-name"> loading... </h5>
-                <span id="student-nim" class="id-primary"> loading... </span>
-                <span id="student-major" class="id-primary"> loading... </span>
-                <span id="stundent-status" class="status"> loading... </span>
+                <h5 class="student-name"> loading... </h5>
+                <span id="student-nim" class="id-primary student-nim"> loading... </span>
+                <span class="id-primary student-major"> loading... </span>
+                <span class="status"> loading... </span>
               </div>
             </article>
 
@@ -210,10 +210,10 @@
                 <h6>Prestasi Akademik</h6>
               </div>
               <p>IPS Semester Ini</p>
-              <span class="curr-value">3.75</span>
+              <span id="curr-ips" class="curr-value">loading...</span>
               <div class="ip-kumulatif">
                 <p>IPK Kumulatif</p>
-                <p>3.60</p>
+                <p id="curr-ipk">loading...</p>
               </div>
             </article>
             <!-- STATISTICS SKS -->
@@ -226,7 +226,7 @@
                 >
                 <h6>Total SKS</h6>
               </div>
-              <p>84/160 SKS</p>
+              <p id="curr-sks" class="curr-sks">loading...</p>
               <!-- <div class="progress-bar"></div> -->
               <div class="progress-bar">
                 <progress id="file" value="50" max="100">70%</progress>
@@ -243,7 +243,7 @@
                 >
                 <h6>Mata Kuliah Aktif</h6>
               </div>
-              <span class="curr-value">6</span>
+              <span id="subject-active" class="curr-value"> loading... </span>
               <p>Semester Ganjil 2024/2025</p>
             </article>
           </div>
@@ -260,9 +260,9 @@
               />
             </div>
             <div class="identity-detail">
-              <h5>Gilang Mayong</h5>
-              <span class="id-primary">Teknik Rekayasa Komputer</span>
-              <span class="status">Active</span>
+              <h5 id="name-bio" class="student-name">loading...</h5>
+              <span class="id-primary major-name">loading...</span>
+              <span id="status-bio" class="status">loading...</span>
             </div>
 
             <!-- SEMESTER AND IPS -->
@@ -298,7 +298,7 @@
                 >
                 <div class="data-value">
                   <p class="label">NIM:</p>
-                  <span class="value">1234567890</span>
+                  <span class="value student-nim">1234567890</span>
                 </div>
               </div>
               <!-- PROGRAM STUDI -->
@@ -308,7 +308,7 @@
                 >
                 <div class="data-value">
                   <p class="label">Program Studi:</p>
-                  <span class="value">Teknik Rekayasa Komputer</span>
+                  <span class="value student-major">Teknik Rekayasa Komputer</span>
                 </div>
               </div>
               <!-- ANGKATAN -->
@@ -318,7 +318,7 @@
                 >
                 <div class="data-value">
                   <p class="label">Angkatan:</p>
-                  <span class="value">2023</span>
+                  <span class="value student-age">2023</span>
                 </div>
               </div>
               <!-- JENIS KELAMIN -->
@@ -326,7 +326,7 @@
                 <span class="material-symbols-rounded biodata-icons">Wc</span>
                 <div class="data-value">
                   <p class="label">Jenis Kelamin:</p>
-                  <span class="value">Laki-laki</span>
+                  <span class="value student-gender">Laki-laki</span>
                 </div>
               </div>
               <!-- NIK -->
@@ -336,7 +336,7 @@
                 >
                 <div class="data-value">
                   <p class="label">NIK:</p>
-                  <span class="value">327607887565721</span>
+                  <span class="value student-nik">327607887565721</span>
                 </div>
               </div>
               <!-- EMAIL CAMPUS -->
@@ -344,7 +344,7 @@
                 <span class="material-symbols-rounded biodata-icons">mail</span>
                 <div class="data-value">
                   <p class="label">Email Campus:</p>
-                  <span class="value">gilangmaywadawong@example.com</span>
+                  <span class="value student-email">gilangmaywadawong@example.com</span>
                 </div>
               </div>
               <!-- AGAMA -->
@@ -354,7 +354,7 @@
                 >
                 <div class="data-value">
                   <p class="label">Agama:</p>
-                  <span class="value">Islam</span>
+                  <span class="value student-religion">Islam</span>
                 </div>
               </div>
               <!-- TANGGAL LAHIR -->
@@ -362,7 +362,7 @@
                 <span class="material-symbols-rounded biodata-icons">cake</span>
                 <div class="data-value">
                   <p class="label">Tempat, Tgl Lahir:</p>
-                  <span class="value">Jakarta, 1 Januari 2000</span>
+                  <span class="valu student-birth">Jakarta, 1 Januari 2000</span>
                 </div>
               </div>
               <!-- ALAMAT -->
@@ -370,7 +370,7 @@
                 <span class="material-symbols-rounded biodata-icons">home</span>
                 <div class="data-value">
                   <p class="label">Alamat:</p>
-                  <span class="value"
+                  <span class="value student-address"
                     >Perum Permata Regency jl. Kristal Blok E8 No 56, RT 005 RW
                     014 Cikampek Utara, Kec. Kotabaru, Karawang Jawa Barat.
                   </span>

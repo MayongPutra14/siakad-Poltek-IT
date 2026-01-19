@@ -92,6 +92,11 @@
   text-align: right;
 }
 
+.card-statistics .curr-sks::after {
+  content: "/160 SKS";
+
+}
+
 /* title statistic */
 .statistic-header {
   display: flex;

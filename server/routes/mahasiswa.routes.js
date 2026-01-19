@@ -4,6 +4,8 @@ const mahasiswaController = require('../controllers/mahasiswa.controller')
 const { isAuthenticatedMahasiswa } = require("../middlewares/auth.middleware");
 
 
+router.get('/me',isAuthenticatedMahasiswa, mahasiswaController.getGlobalData)
+
 router.get('/dashboard',isAuthenticatedMahasiswa, mahasiswaController.getDashboardSummary)
 
 router.get("/profile", isAuthenticatedMahasiswa, mahasiswaController.getMyProfile);

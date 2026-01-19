@@ -15,6 +15,7 @@ async function getMahasiswaProfile(idMahasiswa) {
           m.status,
           m.jenis_kelamin,
           m.tanggal_lahir,
+          m.kota_lahir,
           m.agama,
           m.email,
           m.angkatan,
@@ -106,8 +107,93 @@ const getAllKhsHistory = async (idMahasiswa) => {
   };
 };
 
+// GET MENU-DASHBOARD
+const getDashboardSummary = async (idMahasiswa) => {
+  const query = `
+    SELECT 
+        m.id_mahasiswa,
+        m.nim,
+        m.nama,
+        m.status,
+        p.nama_prodi,
+
+        /* IP Semester Aktif */
+        (
+            SELECT 
+                ROUND(
+                    SUM(
+                        (CASE kh.nilai_huruf
+                            WHEN 'A' THEN 4
+                            WHEN 'B' THEN 3
+                            WHEN 'C' THEN 2
+                            WHEN 'D' THEN 1
+                            ELSE 0
+                        END) * mk.sks
+                    ) / SUM(mk.sks),
+                2)
+            FROM krs k
+            JOIN khs kh ON k.id_krs = kh.id_krs
+            JOIN mata_kuliah mk ON k.id_mk = mk.id_mk
+            JOIN semester s ON k.id_semester = s.id_semester
+            WHERE k.id_mahasiswa = m.id_mahasiswa
+              AND s.is_active = 1
+              AND kh.nilai_huruf IS NOT NULL
+        ) AS ip_semester,
+
+        /* IPK Kumulatif */
+        (
+            SELECT 
+                ROUND(
+                    SUM(
+                        (CASE kh.nilai_huruf
+                            WHEN 'A' THEN 4
+                            WHEN 'B' THEN 3
+                            WHEN 'C' THEN 2
+                            WHEN 'D' THEN 1
+                            ELSE 0
+                        END) * mk.sks
+                    ) / SUM(mk.sks),
+                2)
+            FROM krs k
+            JOIN khs kh ON k.id_krs = kh.id_krs
+            JOIN mata_kuliah mk ON k.id_mk = mk.id_mk
+            WHERE k.id_mahasiswa = m.id_mahasiswa
+              AND kh.nilai_huruf IS NOT NULL
+        ) AS ipk,
+
+        /* Total SKS Lulus */
+        (
+            SELECT 
+                SUM(mk.sks)
+            FROM krs k
+            JOIN khs kh ON k.id_krs = kh.id_krs
+            JOIN mata_kuliah mk ON k.id_mk = mk.id_mk
+            WHERE k.id_mahasiswa = m.id_mahasiswa
+              AND kh.nilai_huruf IN ('A','B','C','D')
+        ) AS total_sks,
+
+        /* Jumlah Matkul Aktif */
+        (
+            SELECT 
+                COUNT(*)
+            FROM krs k
+            JOIN semester s ON k.id_semester = s.id_semester
+            WHERE k.id_mahasiswa = m.id_mahasiswa
+              AND s.is_active = 1
+        ) AS jumlah_matkul_aktif
+
+    FROM mahasiswa m
+    JOIN program_studi p ON m.id_prodi = p.id_prodi
+    WHERE m.id_mahasiswa = ?;
+  `;
+
+  const [rows] = await db.execute(query, [idMahasiswa]);
+  return rows[0];
+}
+
 module.exports = {
   getMahasiswaProfile,
   getAllKhsHistory,
   getAllKrsHistory,
+  getDashboardSummary
 };
